@@ -1,2 +1,2 @@
 # salary-calculator
-easy salary-calculator for 'horoshy coffe'
+simple salary-calculator for 'horoshy coffe'
