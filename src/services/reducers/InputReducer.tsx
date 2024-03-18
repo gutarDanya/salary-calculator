@@ -35,6 +35,7 @@ const InputReducer = (state = initialState, action: TInputActions) => {
             }
         }
         case AVATAR_OF_NEW_EMPLOYEE: {
+            console.log(action.payload)
             return {
                 ...state,
                 avatarNewEmployee: action.payload
@@ -43,3 +44,5 @@ const InputReducer = (state = initialState, action: TInputActions) => {
         default: return state
     }
 }
+
+export default InputReducer

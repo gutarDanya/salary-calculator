@@ -8,7 +8,7 @@ interface InameOfNewEmployee {
     payload: string
 }
 
-const changeNameOfNewEmployee = (name: string) => {
+export const changeNameOfNewEmployee = (name: string) => {
     return {type: NAME_OF_NEW_EMPLOYEE, payload: name}
 }
 
@@ -17,7 +17,7 @@ interface IsalaryOfNewEmployee {
     payload: number
 }
 
-const changeSalaryOfNewEmployee = (salary: number) => {
+export const changeSalaryOfNewEmployee = (salary: number) => {
     return {type: SALARY_OF_NEW_EMPLOYEE, payload: salary}
 }
 
@@ -26,7 +26,7 @@ interface IageOfNewEmployee {
     payload: number
 }
 
-const changeAgeOfNewEmployee = (age: number) => {
+export const changeAgeOfNewEmployee = (age: number) => {
     return {type: AGE_OF_NEW_EMPLOYEE, payload: age}
 }
 
@@ -35,7 +35,7 @@ interface IavatarOfNewEmployee {
     payload: string
 }
 
-const changeAvatarOfNewEmployee = (url: string) => {
+export const changeAvatarOfNewEmployee = (url: string) => {
     return {type: AVATAR_OF_NEW_EMPLOYEE, payload: url}
 }
 
