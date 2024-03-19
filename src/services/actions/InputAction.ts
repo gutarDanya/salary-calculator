@@ -1,7 +1,29 @@
+import { Temployee, TnewEmployee } from "../../utils/Types";
+
 export const NAME_OF_NEW_EMPLOYEE: 'NAME_OF_NEW_EMPLOYE' = 'NAME_OF_NEW_EMPLOYE';
 export const SALARY_OF_NEW_EMPLOYEE: 'SALARY_OF_NEW_EMPLOYE' = 'SALARY_OF_NEW_EMPLOYE';
 export const AGE_OF_NEW_EMPLOYEE: 'AGE_OF_NEW_EMPLOYEE' = 'AGE_OF_NEW_EMPLOYEE';
 export const AVATAR_OF_NEW_EMPLOYEE: 'AVATAR_OF_NEW_EMPLOYEE' = 'AVATAR_OF_NEW_EMPLOYEE';
+export const LOAD_EMPLOYEES: 'LOAD_EMPLOYEES' ='LOAD_EMPLOYEES';
+export const ADD_NEW_EMPLOYEE: 'ADD_NEW_EMPLOYEE' = 'ADD_NEW_EMPLOYEE';
+
+interface IaddNewEmployee {
+    readonly type: typeof ADD_NEW_EMPLOYEE;
+    payload: TnewEmployee
+}
+
+export const addNewEmployee = () => {
+    return {type: ADD_NEW_EMPLOYEE}
+}
+
+interface IloadEmployees {
+    readonly type: typeof LOAD_EMPLOYEES;
+    payload: Array<Temployee>
+}
+
+export const loadEmployees = (employyes: Array<Temployee>) => {
+    return {type: LOAD_EMPLOYEES, payload: employyes}
+}
 
 interface InameOfNewEmployee {
     readonly type: typeof NAME_OF_NEW_EMPLOYEE;
@@ -42,6 +64,8 @@ export const changeAvatarOfNewEmployee = (url: string) => {
 type TInputActions = InameOfNewEmployee |
 IsalaryOfNewEmployee |
 IageOfNewEmployee |
-IavatarOfNewEmployee
+IavatarOfNewEmployee |
+IloadEmployees |
+IaddNewEmployee
 
 export default TInputActions

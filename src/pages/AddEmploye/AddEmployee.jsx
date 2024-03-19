@@ -1,25 +1,27 @@
 import React from "react";
 import styles from './AddEmployee.module.css';
 import { useDispatch, useSelector } from "react-redux";
-import { changeNameOfNewEmployee} from '../../services/actions/InputAction'
+import { addNewEmployee, changeAgeOfNewEmployee, changeAvatarOfNewEmployee, changeNameOfNewEmployee, changeSalaryOfNewEmployee} from '../../services/actions/InputAction'
 
 const AddEmployee = () => {
 
     const dispatch = useDispatch()
 
-    const somethink = useSelector(state => state.InputReducer.nameNewEmployee);
+    const addEmployee = (evt) => {
+        evt.preventDefault()
+        dispatch(addNewEmployee())
+    }
 
     return (
-        <div className={styles.container}>
+        <form className={styles.container}>
             <div className={styles.inputContainer}>
-                <input onChange={(e) => {dispatch(changeNameOfNewEmployee(e.target.value))
-                console.log(somethink)}} className='input' type='text' name="name" placeholder="Имя сотрудника" />
-                <input className='input' type='number' name='age' placeholder="возраст" />
-                <input className='input' type='number' name='salary' placeholder="ставка сотрудника" />
-                <input className='input' type='text' name='avatar' placeholder="аватар пользователя" />
+                <input onChange={(e) => {dispatch(changeNameOfNewEmployee(e.target.value))}} className='input' type='text' name="name" placeholder="Имя сотрудника" />
+                <input onChange={(e) => {dispatch(changeAgeOfNewEmployee(e.target.value))}} className='input' type='number' name='age' placeholder="возраст" />
+                <input onChange={(e) => {dispatch(changeSalaryOfNewEmployee(e.target.value))}} className='input' type='number' name='salary' placeholder="ставка сотрудника" />
+                <input onChange={(e) => {dispatch(changeAvatarOfNewEmployee(e.target.value))}}className='input' type='text' name='avatar' placeholder="аватар пользователя" />
             </div>
-            <button className={styles.addButton} type='submit'>Добавить сотрудника</button>
-        </div>
+            <button onClick={addEmployee} className={styles.addButton} type='submit'>Добавить сотрудника</button>
+        </form>
     )
 }
 

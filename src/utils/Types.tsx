@@ -7,6 +7,15 @@ export type Temployee = {
     avatar?: string | null | undefined;
 }
 
+export type TnewEmployee = {
+    name: string;
+    age: number | string;
+    hours?: Array<Thour>;
+    salary: number;
+    worked?: boolean;
+    avatar?: string | null | undefined;
+}
+
 type Thour = {
     date: string;
     revenue: number

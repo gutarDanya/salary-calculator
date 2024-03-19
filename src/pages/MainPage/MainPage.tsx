@@ -3,6 +3,8 @@ import styles from './MainPage.module.css';
 import { plan } from "../../utils/utilsData";
 import { employeesData } from "../../utils/utilsData";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Temployee } from "../../utils/Types";
 
 export const MainPage: React.FC<Props> = ({title}) => {
 
@@ -11,11 +13,17 @@ export const MainPage: React.FC<Props> = ({title}) => {
 
     const currentKPI = plan.needenPlan <= plan.total ? 0.07 : 0.05;
 
+    const employees = useSelector((state: Tselector) => state.InputReducer.employees);
+
+    const some = useSelector((state: Tselector) => state.InputReducer)
+    console.log(some)
+
+
     const addEmploye = () => {
         navigate('/add-employe', {state: {background: location}})
     }
 
-    const totalSxpenses = employeesData.reduce((acc, item) => {
+    const totalSxpenses = employees.reduce((acc: number, item: Temployee) => {
 
         const totalKPI = item.hours.reduce((acc2, item2) => {
             return acc2 + item2.revenue * currentKPI
@@ -32,7 +40,7 @@ export const MainPage: React.FC<Props> = ({title}) => {
         <div className={styles.container}>
             <h1 className={styles.title}>{title}</h1>
             <div className={styles.employeeContainer}>
-                {employeesData && employeesData.length > 0 && employeesData.map((employee) => {
+                {employees && employees.length > 0 && employees.map((employee: Temployee) => {
                     const totalKPI = employee.hours.reduce((acc, item) => {
                         return acc + item.revenue * currentKPI
                     }, 0)
@@ -58,4 +66,8 @@ export const MainPage: React.FC<Props> = ({title}) => {
 
 type Props = {
     title?: string
+}
+
+type Tselector = {
+    InputReducer: any
 }

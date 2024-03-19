@@ -1,0 +1,92 @@
+.containerOpened {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 90vh;
+    width: 280px;
+    transition: all 250ms linear;
+    border-radius: 10px 20px 20px 0;
+}
+
+.containerClosed {
+    display: flex;
+    position: fixed;
+    left: -250px;
+    bottom: 0;
+    height: 90vh;
+    width: 280px;
+    transition: all 250ms linear;
+    border-radius: ;
+}
+
+.shirmContainer {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100%;
+    border-radius: 0px 10px 10px 0;
+    background-color: #f24da9;
+}
+
+.switchShirm {
+    background-color: #fddc36;
+    border: 0;
+    border-radius: 5px;
+    color: black;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.navigationContainer {
+    padding: 15px;
+    display: grid;
+    gap: 20px;
+    width: 80%;
+    margin: 30px auto auto auto;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.activeLink {
+    width: 80%;
+    padding: 7px;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 22px;
+    margin: auto auto auto 25px;
+    background-color: #5cc9d8;
+    transition: all 150ms linear;
+}
+
+.inactiveLink {
+    padding: 7px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 22px;
+    margin: auto auto auto 10px;
+    background-color: #f24da9;
+    transition: all 150ms linear;
+}
+
+.settingsContainer {
+    padding: 5px;
+    width:70%;
+    margin: auto auto 20px 10px;
+}
+
+.settingsButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 0;
+    background-color: #fddc36;
+}
+
+.settingsText {
+    margin: 0;
+    font-size: 18px;
+}
