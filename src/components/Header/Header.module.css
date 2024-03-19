@@ -1,0 +1,15 @@
+.container {
+    height: 10vh;
+    background-color: #5cc9d8;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+.logo {
+    height: 80%;
+}
