@@ -4,7 +4,9 @@ import { Link, NavLink } from "react-router-dom";
 
 const Shirm = () => {
 
-    const [shirmOpened, setShirmOpened] = useState(false)
+    const [shirmOpened, setShirmOpened] = useState(false);
+
+    const userBoss = false
 
     return (
         <div className={shirmOpened ? styles.containerOpened : styles.containerClosed}>
@@ -18,6 +20,7 @@ const Shirm = () => {
                         <img className={styles.settingsIcon} alt='Натсройки' src='https://img.icons8.com/?size=50&id=BYnvGv84C52t&format=png'/>
                         <p className={styles.settingsText}>Настройки</p>
                     </button>
+                    <button className={styles.changeUser}><img alt='user' className={styles.userIcon} src={userBoss ? 'https://cdn-icons-png.flaticon.com/128/1654/1654220.png' : 'https://cdn-icons-png.flaticon.com/128/456/456212.png'} /></button>
                 </div>
             </div>
             <button className={styles.switchShirm} onClick={() => setShirmOpened(!shirmOpened)} type='button' >{shirmOpened ? '<' : '>'}</button>

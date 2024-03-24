@@ -74,6 +74,7 @@
     padding: 5px;
     width:70%;
     margin: auto auto 20px 10px;
+    display: flex;
 }
 
 .settingsButton {
@@ -88,4 +89,15 @@
 .settingsText {
     margin: 0;
     font-size: 18px;
+}
+
+.changeUser {
+    margin-left: 10px;;
+    background-color: transparent;
+    border: none;
+}
+
+.userIcon {
+    height: 30px;
+    width: 30px;
 }
