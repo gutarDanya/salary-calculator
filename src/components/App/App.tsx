@@ -8,7 +8,7 @@ import { SettingsPage } from '../../pages/SettingsPage/SettingsPage';
 import { useLocation } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 import AddEmployee from '../../pages/AddEmploye/AddEmployee';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loadEmployees } from '../../services/actions/InputAction';
 import { employeesData } from '../../utils/utilsData';
 import Shirm from '../Shirm/Shirm';
@@ -20,7 +20,7 @@ function App() {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
-  const userLogined = false;
+  const userLogined = useSelector((state: Tselector) => state.LoginReducer.loginStatus);
 
   const closePopup = () => {
     navigate(-1)
@@ -62,6 +62,10 @@ function App() {
     )
   }
   
+}
+
+type Tselector = {
+  LoginReducer: any
 }
 
 export default App;
