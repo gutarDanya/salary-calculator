@@ -5,6 +5,8 @@ export type Temployee = {
     salary: number;
     worked: boolean;
     avatar?: string | null | undefined;
+    login: string;
+    password: string;
 }
 
 export type TnewEmployee = {
@@ -14,6 +16,8 @@ export type TnewEmployee = {
     salary: number;
     worked?: boolean;
     avatar?: string | null | undefined;
+    login: string;
+    password: string;
 }
 
 type Thour = {

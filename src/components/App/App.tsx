@@ -13,12 +13,14 @@ import { loadEmployees } from '../../services/actions/InputAction';
 import { employeesData } from '../../utils/utilsData';
 import Shirm from '../Shirm/Shirm';
 import StatisticsPage from '../../pages/StatisticsPage/StatisticsPage';
+import LoginPage from '../../pages/LoginPage/LoginPage';
 
 
 function App() {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
+  const userLogined = false;
 
   const closePopup = () => {
     navigate(-1)
@@ -29,29 +31,37 @@ function App() {
   },[])
 
   const backgroundLocation = location.state?.background;
-  return (
-    <div className="App">
-      <Header />
-      <Shirm />
-      <div className={styles.main}>
-        <Routes location={backgroundLocation || location}>
-          <Route path='/' element={<MainPage title='сотрудники' />} />
-          <Route path='/statistics' element={<StatisticsPage />} />
-          <Route path='/settings' element={<SettingsPage />} />
-        </Routes>
 
-        {backgroundLocation && <Routes>
-          <Route path='/add-employe' element={
-            <Modal title='добавить сотрудника' handleClose={closePopup}>
-              <AddEmployee />
-            </Modal>
-          } />
-        </Routes>
-
-        }
+  if (userLogined) {
+    return (
+      <div className="App">
+        <Header />
+        <Shirm />
+        <div className={styles.main}>
+          <Routes location={backgroundLocation || location}>
+            <Route path='/' element={<MainPage title='сотрудники' />} />
+            <Route path='/statistics' element={<StatisticsPage />} />
+            <Route path='/settings' element={<SettingsPage />} />
+          </Routes>
+  
+          {backgroundLocation && <Routes>
+            <Route path='/add-employe' element={
+              <Modal title='добавить сотрудника' handleClose={closePopup}>
+                <AddEmployee />
+              </Modal>
+            } />
+          </Routes>
+  
+          }
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <LoginPage />
+    )
+  }
+  
 }
 
 export default App;

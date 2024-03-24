@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.window {
+    min-width: 100px;
+    background-color: #fddc36;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+}
+
+.headerText {
+    text-align: center;
+    margin: 0;
+}
+
+.input {
+    width: 250px;
+    font-size: 24px;
+}
+
+.button {
+    margin: 20px auto auto auto;
+    font-size: 27px;
+    background-color: #5cc9d8;
+    border: 0;
+    border-radius: 5px;
+    width: 180px;
+}

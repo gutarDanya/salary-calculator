@@ -2,6 +2,8 @@ import { Tplan, Temployee, TtotalPerHours } from "./Types";
 
 export const employeesData: Array<Temployee> = [
     {
+        login: 'superKatya@gmail.com',
+        password: '114488',
         name: 'Катя',
         age: 18,
         salary: 100,
@@ -21,6 +23,8 @@ export const employeesData: Array<Temployee> = [
     },
     {
         name: 'Даниил',
+        login: 'gutardanya@gmail.com',
+        password: '12431243',
         age: 22,
         salary: 100,
         hours: [{
@@ -52,6 +56,8 @@ export const employeesData: Array<Temployee> = [
     },
     {
         name: 'Кирилл',
+        login: 'agressiveKid@gmail.com',
+        password: '114488',
         age: 19,
         salary: 100,
         hours: [{
@@ -74,6 +80,8 @@ export const employeesData: Array<Temployee> = [
     },
     {
         name: 'Иван',
+        login: 'Ivan@gmail.com',
+        password: '1144',
         age: 20,
         salary: 110,
         hours: [{
@@ -93,6 +101,8 @@ export const employeesData: Array<Temployee> = [
     },
     {
         name: 'Камиля',
+        login: 'Kamilya@gmail.com',
+        password: '1144',
         age: 20,
         salary: 70,
         hours: [{
@@ -112,6 +122,8 @@ export const employeesData: Array<Temployee> = [
     },
     {
         name: 'Алина',
+        login: 'AlinaBoss@gmail.com',
+        password: '1144',
         age: 20,
         salary: 50,
         hours: [],

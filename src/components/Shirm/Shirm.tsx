@@ -6,8 +6,7 @@ const Shirm = () => {
 
     const [shirmOpened, setShirmOpened] = useState(false);
 
-    const userBoss = false
-
+    const userBoss = false;
     return (
         <div className={shirmOpened ? styles.containerOpened : styles.containerClosed}>
             <div className={styles.shirmContainer}>
