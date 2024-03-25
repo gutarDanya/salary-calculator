@@ -3,14 +3,13 @@ import styles from './LoginPage.module.css';
 import { useDispatch, useSelector } from "react-redux";
 import { setLoginStatus, setLoginValue, setPasswordValue } from "../../services/actions/LoginAction";
 import { employeesData } from "../../utils/utilsData";
+import { setCookie } from "../../utils/Cookie";
 
 const LoginPage = () => {
     const dispatch = useDispatch();
 
     const [loginValue, changeLoginValue] = useState('');
     const [passwordValue, changePasswordValue] = useState('');
-
-    const loginStatus = useSelector((state: Tselector) => state.LoginReducer.loginStatus);
 
     const submitLogin = (evt: any) => {
         evt.preventDefault();
@@ -19,7 +18,6 @@ const LoginPage = () => {
 
         if (employeesData.some((employee) => {return employee.login === loginValue && employee.password === passwordValue})) {
             dispatch(setLoginStatus(true))
-            console.log(loginStatus)
         }
     }
 

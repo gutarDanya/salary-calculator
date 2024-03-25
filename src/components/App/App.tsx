@@ -14,25 +14,31 @@ import { employeesData } from '../../utils/utilsData';
 import Shirm from '../Shirm/Shirm';
 import StatisticsPage from '../../pages/StatisticsPage/StatisticsPage';
 import LoginPage from '../../pages/LoginPage/LoginPage';
+import { getCookie } from '../../utils/Cookie';
+import { checkUserAuth } from '../../services/actions/LoginAction';
 
 
 function App() {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
-  const userLogined = useSelector((state: Tselector) => state.LoginReducer.loginStatus);
+
+  const userLogined = useSelector((state: Tselector) => state.LoginReducer.loginStatus)
 
   const closePopup = () => {
     navigate(-1)
   }
 
+  console.log(userLogined)
+
   useEffect(() => {
     dispatch(loadEmployees(employeesData))
+    dispatch(checkUserAuth())
   },[])
 
   const backgroundLocation = location.state?.background;
 
-  if (userLogined) {
+  if (userLogined === 'login') {
     return (
       <div className="App">
         <Header />

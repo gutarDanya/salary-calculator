@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import styles from './Shirm.module.css';
 import { Link, NavLink } from "react-router-dom";
+import { deleteCookie, getCookie } from "../../utils/Cookie";
+import { useDispatch } from "react-redux";
+import { setLoginStatus } from "../../services/actions/LoginAction";
 
 const Shirm = () => {
+    const dispatch = useDispatch();
 
     const [shirmOpened, setShirmOpened] = useState(false);
+
+    const exitFromAcc = () => {
+        dispatch(setLoginStatus(false))
+    }
+
 
     const userBoss = false;
     return (
@@ -21,6 +30,7 @@ const Shirm = () => {
                     </button>
                     <button className={styles.changeUser}><img alt='user' className={styles.userIcon} src={userBoss ? 'https://cdn-icons-png.flaticon.com/128/1654/1654220.png' : 'https://cdn-icons-png.flaticon.com/128/456/456212.png'} /></button>
                 </div>
+                <button className={styles.exitButton} onClick={exitFromAcc} type='button' >Выйти</button>
             </div>
             <button className={styles.switchShirm} onClick={() => setShirmOpened(!shirmOpened)} type='button' >{shirmOpened ? '<' : '>'}</button>
         </div>

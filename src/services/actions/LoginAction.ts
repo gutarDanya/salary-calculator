@@ -1,6 +1,7 @@
 export const SET_LOGIN_VALUE: 'SET_LOGIN_VALUE' ='SET_LOGIN_VALUE';
 export const SET_PASSWORD_VALUE: 'SET_PASSWORD_VALUE' = 'SET_PASSWORD_VALUE';
 export const SET_LOGIN_STATUS: 'SET_LOGIN_STATUS' = 'SET_LOGIN_STATUS';
+export const CHECK_AUTH_USER: 'CHECK_AUTH_USER' = 'CHECK_AUTH_USER';
 
 interface IsetLoginValue {
     readonly type: typeof SET_LOGIN_VALUE;
@@ -29,6 +30,14 @@ export const setLoginStatus = (status: boolean) => {
     return {type: SET_LOGIN_STATUS, payload: status}
 }
 
-type TLoginActions = IsetLoginValue | IsetPassword | IsetLoginStatus
+interface IcheckLoginOfUser {
+    readonly type: typeof CHECK_AUTH_USER
+}
+
+export const checkUserAuth = () => {
+    return {type: CHECK_AUTH_USER}
+}
+
+type TLoginActions = IsetLoginValue | IsetPassword | IsetLoginStatus | IcheckLoginOfUser
 
 export default TLoginActions;
