@@ -2,19 +2,19 @@ import { deleteCookie, getCookie, setCookie } from "../../utils/Cookie";
 import { CHECK_AUTH_USER, SET_LOGIN_STATUS, SET_LOGIN_VALUE, SET_PASSWORD_VALUE } from "../actions/LoginAction";
 import TLoginActions from "../actions/LoginAction";
 
-type TinitialState = {
+interface IinitialState {
     login: string;
     password: string;
-    loginStatus: boolean | string;
+    loginStatus: string | undefined;
 }
 
-const initialState: TinitialState = {
+const initialState: IinitialState = {
     login: '',
     password: '',
     loginStatus: ''
 }
 
-const LoginReducer = (state: TinitialState = initialState, action: TLoginActions) => {
+const LoginReducer = (state: IinitialState = initialState, action: TLoginActions) : IinitialState => {
     switch (action.type) {
         case SET_LOGIN_VALUE: {
             return {

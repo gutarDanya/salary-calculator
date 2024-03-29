@@ -19,10 +19,12 @@ export const employeesData: Array<Temployee> = [
             date: '17.03.2024',
             revenue: 1241
         }],
-        worked: true
+        worked: true,
+        id: 12451
     },
     {
         name: 'Даниил',
+        id: 2281488,
         login: 'gutardanya@gmail.com',
         password: '12431243',
         age: 22,
@@ -56,6 +58,7 @@ export const employeesData: Array<Temployee> = [
     },
     {
         name: 'Кирилл',
+        id: 12512512,
         login: 'agressiveKid@gmail.com',
         password: '114488',
         age: 19,
@@ -80,6 +83,7 @@ export const employeesData: Array<Temployee> = [
     },
     {
         name: 'Иван',
+        id: 56125,
         login: 'Ivan@gmail.com',
         password: '1144',
         age: 20,
@@ -101,6 +105,7 @@ export const employeesData: Array<Temployee> = [
     },
     {
         name: 'Камиля',
+        id: 116126,
         login: 'Kamilya@gmail.com',
         password: '1144',
         age: 20,
@@ -122,6 +127,7 @@ export const employeesData: Array<Temployee> = [
     },
     {
         name: 'Алина',
+        id: 5125154,
         login: 'AlinaBoss@gmail.com',
         password: '1144',
         age: 20,

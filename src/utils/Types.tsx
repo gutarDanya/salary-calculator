@@ -7,6 +7,7 @@ export type Temployee = {
     avatar?: string | null | undefined;
     login: string;
     password: string;
+    id: any;
 }
 
 export type TnewEmployee = {

@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import styles from './Shirm.module.css';
 import { Link, NavLink } from "react-router-dom";
 import { deleteCookie, getCookie } from "../../utils/Cookie";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setLoginStatus } from "../../services/actions/LoginAction";
+import { switchShirmStatus } from "../../services/actions/InputAction";
 
 const Shirm = () => {
     const dispatch = useDispatch();
 
-    const [shirmOpened, setShirmOpened] = useState(false);
-
+    const shirmOpened = useSelector((state:Tselector) => state.InputReducer.shirmStatus)
+    
     const exitFromAcc = () => {
         dispatch(setLoginStatus(false))
     }
@@ -32,9 +33,13 @@ const Shirm = () => {
                 </div>
                 <button className={styles.exitButton} onClick={exitFromAcc} type='button' >Выйти</button>
             </div>
-            <button className={styles.switchShirm} onClick={() => setShirmOpened(!shirmOpened)} type='button' >{shirmOpened ? '<' : '>'}</button>
+            <button className={styles.switchShirm} onClick={() => {dispatch(switchShirmStatus())}} type='button' >{shirmOpened ? '<' : '>'}</button>
         </div>
     )
+}
+
+type Tselector = {
+    InputReducer: any
 }
 
 export default Shirm

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from './MainPage.module.css';
 import { plan } from "../../utils/utilsData";
 import { employeesData } from "../../utils/utilsData";
@@ -11,17 +11,21 @@ export const MainPage: React.FC<Props> = ({title}) => {
     const location = useLocation()
     const navigate = useNavigate()
 
+    let pageActive = false;
+
     const currentKPI = plan.needenPlan <= plan.total ? 0.07 : 0.05;
 
     const employees = useSelector((state: Tselector) => state.InputReducer.employees);
 
-    const some = useSelector((state: Tselector) => state.InputReducer)
-    console.log(some)
-
+    const shirmOpened = useSelector((state:Tselector) => state.InputReducer.shirmStatus)
 
     const addEmploye = () => {
         navigate('/add-employe', {state: {background: location}})
     }
+
+    useEffect(() => {
+        pageActive = true
+    }, [])
 
     const totalSxpenses = employees.reduce((acc: number, item: Temployee) => {
 
@@ -34,18 +38,17 @@ export const MainPage: React.FC<Props> = ({title}) => {
         )
     }, 0)
 
-    console.log(totalSxpenses)
     
     return(
         <div className={styles.container}>
             <h1 className={styles.title}>{title}</h1>
-            <div className={styles.employeeContainer}>
-                {employees && employees.length > 0 && employees.map((employee: Temployee) => {
+            <div className={styles.employeeContainer} style={shirmOpened ? {marginLeft: '260px', width: 'calc(100% - 260px)'} : {}}>
+                {employees && employees.length > 0 && employees.map((employee: Temployee, i: number) => {
                     const totalKPI = employee.hours.reduce((acc, item) => {
                         return acc + item.revenue * currentKPI
                     }, 0)
                     return (
-                        <div className={styles.cart}>
+                        <div className={styles.cart} >
                             <div className={styles.bio}>
                             {employee.avatar
                              ? <img className={styles.avatar} src={employee.avatar} alt='аватар' /> 

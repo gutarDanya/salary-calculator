@@ -4,12 +4,14 @@ export const NAME_OF_NEW_EMPLOYEE: 'NAME_OF_NEW_EMPLOYE' = 'NAME_OF_NEW_EMPLOYE'
 export const SALARY_OF_NEW_EMPLOYEE: 'SALARY_OF_NEW_EMPLOYE' = 'SALARY_OF_NEW_EMPLOYE';
 export const AGE_OF_NEW_EMPLOYEE: 'AGE_OF_NEW_EMPLOYEE' = 'AGE_OF_NEW_EMPLOYEE';
 export const AVATAR_OF_NEW_EMPLOYEE: 'AVATAR_OF_NEW_EMPLOYEE' = 'AVATAR_OF_NEW_EMPLOYEE';
+export const LOGIN_NEW_EMPLOYEE: 'LOGIN_NEW_EMPLOYEE' = 'LOGIN_NEW_EMPLOYEE';
+export const PASSWORD_NEW_EMPLOYEE: 'PASSWORD_NEW_EMPLOYEE' = 'PASSWORD_NEW_EMPLOYEE';
 export const LOAD_EMPLOYEES: 'LOAD_EMPLOYEES' ='LOAD_EMPLOYEES';
 export const ADD_NEW_EMPLOYEE: 'ADD_NEW_EMPLOYEE' = 'ADD_NEW_EMPLOYEE';
+export const SWITCH_SHIRM_STATUS: 'SWITCH_SHIRM_STATUS' = 'SWITCH_SHIRM_STATUS';
 
 interface IaddNewEmployee {
     readonly type: typeof ADD_NEW_EMPLOYEE;
-    payload: TnewEmployee
 }
 
 export const addNewEmployee = () => {
@@ -48,6 +50,24 @@ interface IageOfNewEmployee {
     payload: number
 }
 
+interface IloginOfNewEmployee {
+    readonly type: typeof LOGIN_NEW_EMPLOYEE;
+    payload: string;
+}
+
+export const changeLoginOfNewEmployee = (email: string) => {
+    return {type: LOGIN_NEW_EMPLOYEE, payload: email}
+}
+
+interface IpasswordOfNewEmployee {
+    readonly type: typeof PASSWORD_NEW_EMPLOYEE;
+    payload: string
+}
+
+export const changePasswordOfNewEmployee = (password: string) => {
+    return { type: PASSWORD_NEW_EMPLOYEE, payload: password}
+}
+
 export const changeAgeOfNewEmployee = (age: number) => {
     return {type: AGE_OF_NEW_EMPLOYEE, payload: age}
 }
@@ -61,11 +81,22 @@ export const changeAvatarOfNewEmployee = (url: string) => {
     return {type: AVATAR_OF_NEW_EMPLOYEE, payload: url}
 }
 
+interface IswitchShirmStatus {
+    readonly type: typeof SWITCH_SHIRM_STATUS
+}
+
+export const switchShirmStatus = () => {
+    return {type: SWITCH_SHIRM_STATUS}
+}
+
 type TInputActions = InameOfNewEmployee |
 IsalaryOfNewEmployee |
 IageOfNewEmployee |
 IavatarOfNewEmployee |
 IloadEmployees |
-IaddNewEmployee
+IaddNewEmployee |
+IswitchShirmStatus |
+IloginOfNewEmployee |
+IpasswordOfNewEmployee
 
 export default TInputActions

@@ -1,24 +1,39 @@
 import { Temployee } from "../../utils/Types";
-import TInputActions, { ADD_NEW_EMPLOYEE, AGE_OF_NEW_EMPLOYEE, AVATAR_OF_NEW_EMPLOYEE, LOAD_EMPLOYEES, NAME_OF_NEW_EMPLOYEE, SALARY_OF_NEW_EMPLOYEE } from "../actions/InputAction";
+import TInputActions, {
+    ADD_NEW_EMPLOYEE,
+    AGE_OF_NEW_EMPLOYEE,
+    AVATAR_OF_NEW_EMPLOYEE,
+    LOAD_EMPLOYEES,
+    NAME_OF_NEW_EMPLOYEE,
+    SALARY_OF_NEW_EMPLOYEE,
+    SWITCH_SHIRM_STATUS
+} from "../actions/InputAction";
 
-const  initialState: TinitialState = {
+
+const initialState: IinitialState = {
     employees: [],
     nameNewEmployee: '',
-    ageNewEmployee: null,
-    salaryNewEmployee: null,
-    avatarNewEmployee: ''
+    ageNewEmployee: 0,
+    salaryNewEmployee: 0,
+    avatarNewEmployee: '',
+    login: '',
+    password: '',
+    shirmStatus: true
 }
 
-type TinitialState = {
+interface IinitialState {
     employees: Array<Temployee>
     nameNewEmployee: string;
-    ageNewEmployee: null | number;
-    salaryNewEmployee: null | number;
+    ageNewEmployee: number;
+    salaryNewEmployee: number;
     avatarNewEmployee: string;
+    login: string;
+    password: string;
+    shirmStatus: boolean
 }
 
-const InputReducer = (state:TinitialState = initialState, action: TInputActions) => {
-    switch(action.type) {
+const InputReducer = (state: IinitialState = initialState, action: TInputActions): IinitialState => {
+    switch (action.type) {
         case NAME_OF_NEW_EMPLOYEE: {
             return {
                 ...state,
@@ -59,8 +74,18 @@ const InputReducer = (state:TinitialState = initialState, action: TInputActions)
                     salary: state.salaryNewEmployee,
                     avatar: state.avatarNewEmployee ? state.avatarNewEmployee : 'https://cdn-icons-png.flaticon.com/512/18/18601.png',
                     worked: false,
-                    hours: []
+                    hours: [],
+                    login: state.login,
+                    password: state.password,
+                    id: new Date
                 }]
+            }
+        }
+        case SWITCH_SHIRM_STATUS: {
+            console.log(state.shirmStatus)
+            return {
+                ...state,
+                shirmStatus: !state.shirmStatus
             }
         }
         default: return state

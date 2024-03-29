@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './AddEmployee.module.css';
 import { useDispatch, useSelector } from "react-redux";
-import { addNewEmployee, changeAgeOfNewEmployee, changeAvatarOfNewEmployee, changeNameOfNewEmployee, changeSalaryOfNewEmployee} from '../../services/actions/InputAction'
+import { addNewEmployee, changeAgeOfNewEmployee, changeAvatarOfNewEmployee, changeLoginOfNewEmployee, changeNameOfNewEmployee, changePasswordOfNewEmployee, changeSalaryOfNewEmployee} from '../../services/actions/InputAction'
 
 const AddEmployee = () => {
 
@@ -19,6 +19,8 @@ const AddEmployee = () => {
                 <input onChange={(e) => {dispatch(changeAgeOfNewEmployee(e.target.value))}} className='input' type='number' name='age' placeholder="возраст" />
                 <input onChange={(e) => {dispatch(changeSalaryOfNewEmployee(e.target.value))}} className='input' type='number' name='salary' placeholder="ставка сотрудника" />
                 <input onChange={(e) => {dispatch(changeAvatarOfNewEmployee(e.target.value))}}className='input' type='text' name='avatar' placeholder="аватар пользователя" />
+                <input onChange={(e) => {dispatch(changeLoginOfNewEmployee(e.target.value))}} className="input" type='text' name='login' placeholder="e-mail" />
+                <input onChange={(e) => {dispatch(changePasswordOfNewEmployee(e.target.value))}} className="input" type='text' name='passwotd' placeholder="пароль" />
             </div>
             <button onClick={addEmployee} className={styles.addButton} type='submit'>Добавить сотрудника</button>
         </form>
