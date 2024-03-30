@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import styles from './Shirm.module.css';
 import { Link, NavLink } from "react-router-dom";
-import { deleteCookie, getCookie } from "../../utils/Cookie";
-import { useDispatch, useSelector } from "react-redux";
 import { setLoginStatus } from "../../services/actions/LoginAction";
 import { switchShirmStatus } from "../../services/actions/InputAction";
+import { useAppDispatch, useAppSelector } from "../../services/store";
 
 const Shirm = () => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
-    const shirmOpened = useSelector((state:Tselector) => state.InputReducer.shirmStatus)
+    const shirmOpened = useAppSelector(state => state.InputReducer.shirmStatus);
     
     const exitFromAcc = () => {
         dispatch(setLoginStatus(false))

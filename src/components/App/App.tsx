@@ -8,28 +8,25 @@ import { SettingsPage } from '../../pages/SettingsPage/SettingsPage';
 import { useLocation } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 import AddEmployee from '../../pages/AddEmploye/AddEmployee';
-import { useDispatch, useSelector } from 'react-redux';
 import { loadEmployees } from '../../services/actions/InputAction';
 import { employeesData } from '../../utils/utilsData';
 import Shirm from '../Shirm/Shirm';
 import StatisticsPage from '../../pages/StatisticsPage/StatisticsPage';
 import LoginPage from '../../pages/LoginPage/LoginPage';
-import { getCookie } from '../../utils/Cookie';
 import { checkUserAuth } from '../../services/actions/LoginAction';
+import { useAppDispatch, useAppSelector } from '../../services/store';
 
 
 function App() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const location = useLocation();
   const navigate = useNavigate();
 
-  const userLogined = useSelector((state: Tselector) => state.LoginReducer.loginStatus)
+  const userLogined = useAppSelector(state => state.LoginReducer.loginStatus);
 
   const closePopup = () => {
     navigate(-1)
   }
-
-  console.log(userLogined)
 
   useEffect(() => {
     dispatch(loadEmployees(employeesData))
@@ -68,10 +65,6 @@ function App() {
     )
   }
   
-}
-
-type Tselector = {
-  LoginReducer: any
 }
 
 export default App;

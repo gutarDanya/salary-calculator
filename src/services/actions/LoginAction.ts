@@ -23,7 +23,7 @@ export const setPasswordValue = (value: string) => {
 
 interface IsetLoginStatus {
     readonly type: typeof SET_LOGIN_STATUS;
-    payload: boolean;
+    payload?: boolean;
 }
 
 export const setLoginStatus = (status: boolean) => {

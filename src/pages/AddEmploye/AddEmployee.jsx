@@ -1,11 +1,11 @@
 import React from "react";
 import styles from './AddEmployee.module.css';
-import { useDispatch, useSelector } from "react-redux";
 import { addNewEmployee, changeAgeOfNewEmployee, changeAvatarOfNewEmployee, changeLoginOfNewEmployee, changeNameOfNewEmployee, changePasswordOfNewEmployee, changeSalaryOfNewEmployee} from '../../services/actions/InputAction'
+import { useAppDispatch } from "../../services/store";
 
 const AddEmployee = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch();
 
     const addEmployee = (evt) => {
         evt.preventDefault()

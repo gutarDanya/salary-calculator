@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import styles from './MainPage.module.css';
 import { plan } from "../../utils/utilsData";
-import { employeesData } from "../../utils/utilsData";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { Temployee } from "../../utils/Types";
+import { useAppSelector } from "../../services/store";
 
 export const MainPage: React.FC<Props> = ({title}) => {
 
@@ -15,9 +14,9 @@ export const MainPage: React.FC<Props> = ({title}) => {
 
     const currentKPI = plan.needenPlan <= plan.total ? 0.07 : 0.05;
 
-    const employees = useSelector((state: Tselector) => state.InputReducer.employees);
+    const employees = useAppSelector(state => state.InputReducer.employees);
 
-    const shirmOpened = useSelector((state:Tselector) => state.InputReducer.shirmStatus)
+    const shirmOpened = useAppSelector(state => state.InputReducer.shirmStatus);
 
     const addEmploye = () => {
         navigate('/add-employe', {state: {background: location}})

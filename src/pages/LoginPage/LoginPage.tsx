@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styles from './LoginPage.module.css';
-import { useDispatch, useSelector } from "react-redux";
 import { setLoginStatus, setLoginValue, setPasswordValue } from "../../services/actions/LoginAction";
 import { employeesData } from "../../utils/utilsData";
 import { setCookie } from "../../utils/Cookie";
+import { useAppDispatch } from "../../services/store";
 
 const LoginPage = () => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const [loginValue, changeLoginValue] = useState('');
     const [passwordValue, changePasswordValue] = useState('');
