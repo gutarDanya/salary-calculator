@@ -47,7 +47,7 @@ export const MainPage: React.FC<Props> = ({title}) => {
                         return acc + item.revenue * currentKPI
                     }, 0)
                     return (
-                        <div className={styles.cart} >
+                        <div className={styles.cart} key={employee.id}>
                             <div className={styles.bio}>
                             {employee.avatar
                              ? <img className={styles.avatar} src={employee.avatar} alt='аватар' /> 

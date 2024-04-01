@@ -59,7 +59,6 @@ const InputReducer = (state: IinitialState = initialState, action: TInputActions
             }
         }
         case LOAD_EMPLOYEES: {
-            console.log(action.payload)
             return {
                 ...state,
                 employees: action.payload
