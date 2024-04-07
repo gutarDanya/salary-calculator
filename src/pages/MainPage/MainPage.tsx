@@ -4,11 +4,20 @@ import { plan } from "../../utils/utilsData";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Temployee } from "../../utils/Types";
 import { useAppSelector } from "../../services/store";
+import { baseTestUrl } from "../../utils/scripts";
 
 export const MainPage: React.FC<Props> = ({title}) => {
 
-    const location = useLocation()
-    const navigate = useNavigate()
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    fetch(`${baseTestUrl}/employees`)
+    .then((res) => {
+        return res.json()
+    })
+    .then((res) => {
+        console.log(res)
+    })
 
     let pageActive = false;
 
