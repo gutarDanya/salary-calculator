@@ -11,7 +11,7 @@ export const MainPage: React.FC<Props> = ({title}) => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    fetch(`${baseTestUrl}/employees`)
+    fetch(`${baseTestUrl}/desserts`)
     .then((res) => {
         return res.json()
     })

@@ -6,18 +6,20 @@
             "name": "Катя",
             "age": 18,
             "salary": 100,
-            "hours": [{
-                "date": "17.03.2024",
-                "revenue": 1241
-            },
-            {
-                "date": "17.03.2024",
-                "revenue": 1241
-            },
-            {
-                "date": "17.03.2024",
-                "revenue": 1241
-            }],
+            "hours": [
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                },
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                },
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                }
+            ],
             "worked": true,
             "id": 12451
         },
@@ -28,30 +30,32 @@
             "password": "12431243",
             "age": 22,
             "salary": 100,
-            "hours": [{
-                "date": "17.03.2024",
-                "revenue": 1241
-            },
-            {
-                "date": "17.03.2024",
-                "revenue": 1241
-            },
-            {
-                "date": "17.03.2024",
-                "revenue": 1241
-            },
-            {
-                "date": "17.03.2024",
-                "revenue": 1241
-            },
-            {
-                "date": "17.03.2024",
-                "revenue": 500
-            },
-            {
-                "date": "18.03.2024",
-                "revenue": 500
-            }],
+            "hours": [
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                },
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                },
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                },
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                },
+                {
+                    "date": "17.03.2024",
+                    "revenue": 500
+                },
+                {
+                    "date": "18.03.2024",
+                    "revenue": 500
+                }
+            ],
             "worked": false,
             "avatar": "https://sun9-20.userapi.com/s/v1/if2/K0tmu-xAOioYNrJXZbrjGEqjGSbZ3FWtrnzFzY7r7gqMMVcKTg1wv8SO8qXQEcMZ5W34AI5u0QdlcwnFBtViahzD.jpg?quality=95&crop=308,831,1260,1260&as=50x50,100x100,200x200,400x400&ava=1&u=DeqxvZ208FKABsJlX_SwUqra8DyoOKND9I3WuHCgri0&cs=200x200"
         },
@@ -62,22 +66,24 @@
             "password": "114488",
             "age": 19,
             "salary": 100,
-            "hours": [{
-                "date": "17.03.2024",
-                "revenue": 1241
-            },
-            {
-                "date": "17.03.2024",
-                "revenue": 1241
-            },
-            {
-                "date": "17.03.2024",
-                "revenue": 1241
-            },
-            {
-                "date": "17.03.2024",
-                "revenue": 1241
-            }],
+            "hours": [
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                },
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                },
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                },
+                {
+                    "date": "17.03.2024",
+                    "revenue": 1241
+                }
+            ],
             "worked": false
         },
         {
@@ -87,19 +93,24 @@
             "password": "1144",
             "age": 20,
             "salary": 110,
-            "hours": [{
-                "date": "14.03.2024",
-                "revenue": 1314
-            },{
-                "date": "14.03.2024",
-                "revenue": 200
-            },{
-                "date": "14.03.2024",
-                "revenue": 2000
-            },{
-                "date": "14.03.2024",
-                "revenue": 1200
-            }],
+            "hours": [
+                {
+                    "date": "14.03.2024",
+                    "revenue": 1314
+                },
+                {
+                    "date": "14.03.2024",
+                    "revenue": 200
+                },
+                {
+                    "date": "14.03.2024",
+                    "revenue": 2000
+                },
+                {
+                    "date": "14.03.2024",
+                    "revenue": 1200
+                }
+            ],
             "worked": true
         },
         {
@@ -109,19 +120,24 @@
             "password": "1144",
             "age": 20,
             "salary": 70,
-            "hours": [{
-                "date": "14.03.2024",
-                "revenue": 1314
-            },{
-                "date": "14.03.2024",
-                "revenue": 200
-            },{
-                "date": "14.03.2024",
-                "revenue": 2000
-            },{
-                "date": "14.03.2024",
-                "revenue": 1200
-            }],
+            "hours": [
+                {
+                    "date": "14.03.2024",
+                    "revenue": 1314
+                },
+                {
+                    "date": "14.03.2024",
+                    "revenue": 200
+                },
+                {
+                    "date": "14.03.2024",
+                    "revenue": 2000
+                },
+                {
+                    "date": "14.03.2024",
+                    "revenue": 1200
+                }
+            ],
             "worked": true
         },
         {
@@ -134,6 +150,1771 @@
             "hours": [],
             "worked": false,
             "avatar": "https://sun9-35.userapi.com/s/v1/if2/vdSLHxTSPoy_C7WjkTugAb4bBKy3k3SK5LSrP_Tx2OxnqeFuXgI5dOkCAQ0O_nScbYF1geto-lEdU-XTuwCbJbQD.jpg?quality=95&crop=148,0,2341,2341&as=50x50,100x100,200x200,400x400&ava=1&u=gTYz8mTTWjST1sMNjT4PCdzITXzAweMa8L97EwD46g8&cs=200x200"
+        }
+    ],
+    "desserts": [
+        {
+            "name": "Сникерс",
+            "url": "",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": true,
+            "withoutFlour": true,
+            "withoutGluten": true,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 1,
+            "ingredients": [
+                "Кокосовое молоко",
+                "какао",
+                "какао масло",
+                "сироп топинамбура",
+                "кокосовое масло",
+                "финики",
+                "кешью",
+                "Арахис"
+            ],
+            "info": {
+                "kkal": 508,
+                "p": 9.4,
+                "f": 39.0,
+                "c": 30.6
+            }
+        },
+        {
+            "name": "Твикс",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": true,
+            "withoutFlour": true,
+            "withoutGluten": true,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 2,
+            "ingredients": [
+                "миндаль",
+                "кокосовая мука",
+                "финики",
+                "сироп топинамбура",
+                "кокосовое масло",
+                "арахисовая паста",
+                "молочный шоколад на стевии",
+                "какао масло"
+            ],
+            "info": {
+                "kkal": 350,
+                "p": 7,
+                "f": 24,
+                "c": 30
+            }
+        },
+        {
+            "name": "Овсянное печенье",
+            "hasStevia": false,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": true,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 3,
+            "ingredients": [
+                "кокосовое масло",
+                "Кокосовый сахар",
+                "овсянное молоко",
+                "овсяные хлопья",
+                "полбяная мука",
+                "Пищевая сода",
+                "Соль",
+                "корица",
+                "мускатный орех",
+                "какао масло",
+                "какао",
+                "Минадальные лепестки"
+            ],
+            "info": {
+                "kkal": 122,
+                "p": 7.1,
+                "f": 14.4,
+                "c": 19
+            }
+        },
+        {
+            "name": "Кейкпопс",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": false,
+            "id": 4,
+            "ingredients": [
+                "бисквит шоколадный",
+                "творожный сыр",
+                "сироп топинамбура",
+                "обезжиренное молоко",
+                "кокосовая стружка",
+                "молочный шоколад на стевии",
+                "какао масло"
+            ],
+            "info": {
+                "kkal": 161,
+                "p": 3.9,
+                "f": 10.8,
+                "c": 12.1
+            }
+        },
+        {
+            "name": "Клубничный кейк-попс",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": false,
+            "id": 5,
+            "ingredients": [
+                "бисквит сливочный",
+                "творожный сыр",
+                "сироп топинамбура",
+                "обезжиренное молоко",
+                "кокосовая стружка",
+                "сублимированная клубника",
+                "молочный шоколад на стевии",
+                "какао масло"
+            ],
+            "info": {
+                "kkal": 170,
+                "p": 3.8,
+                "f": 11.1,
+                "c": 13.3
+            }
+        },
+        {
+            "name": "печенье с арахисовой пастой",
+            "hasStevia": false,
+            "hasTopinambura": false,
+            "fewCalories": false,
+            "vegan": true,
+            "withoutFlour": true,
+            "withoutGluten": true,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 6,
+            "ingredients": [
+                "фундук",
+                "финики",
+                "арахисовая паста",
+                "какао масло",
+                "молочный шоколад на стевии"
+            ],
+            "info": {
+                "kkal": 320,
+                "p": 6,
+                "f": 26,
+                "c": 15
+            }
+        },
+        {
+            "name": "карамельная конфета",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": true,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 7,
+            "ingredients": [
+                "финики",
+                "арахисовая паста",
+                "миндаль",
+                "фундук",
+                "кешью",
+                "какао масло",
+                "какао",
+                "сироп топинамбура"
+            ],
+            "info": {
+                "kkal": 181.3,
+                "p": 3.6,
+                "f": 13.4,
+                "c": 12
+            }
+        },
+        {
+            "name": "баунти конфета",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": false,
+            "id": 8,
+            "ingredients": [
+                "кокосовая стружка",
+                "кокосовое масло",
+                "сухое обезжиренное молоко (кукурузный крахмал)",
+                "сироп топинамбура",
+                "Кокосовое молоко",
+                "молочный шоколад на стевии",
+                "какао масло"
+            ],
+            "info": {
+                "kkal": 134,
+                "p": 3.2,
+                "f": 11,
+                "c": 7.3
+            }
+        },
+        {
+            "name": "Трюфель с апельсином",
+            "hasStevia": true,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": true,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "какао",
+                "тёмный шоколад на стевии",
+                "апельсиновый сок"
+            ],
+            "info": {
+                "kkal": 96,
+                "p": 2,
+                "f": 5,
+                "c": 10.7
+            }
+        },
+        {
+            "name": "рафаэлло",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "кешью",
+                "топинамбур",
+                "коксовый урбеч",
+                "кокосовая стружка",
+                "миндаль",
+                "сухое обезжиренное молоко (кукурузный крахмал)"
+            ],
+            "info": {
+                "kkal": 109,
+                "p": 3.4,
+                "f": 8.3,
+                "c": 6.9
+            }
+        },
+        {
+            "name": "конфета с сухофруктами",
+            "hasStevia": false,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "миндаль",
+                "фундук",
+                "курага",
+                "кунжут"
+            ],
+            "info": {
+                "kkal": 66,
+                "p": 1.3,
+                "f": 3.3,
+                "c": 8.5
+            }
+        },
+        {
+            "name": "шоколад-банан кусок",
+            "hasStevia": true,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "рисовая мука",
+                "овсяная мука",
+                "обезжиренное молоко",
+                "яйца",
+                "растительное молоко",
+                "стевия",
+                "разрызлитель",
+                "какао",
+                "йогурт",
+                "банан",
+                "шоколад на стевии"
+            ],
+            "info": {
+                "kkal": 190,
+                "p": 9.5,
+                "f": 5.4,
+                "c": 5.4
+            }
+        },
+        {
+            "name": "медовик кусок",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "рисовая мука",
+                "полбяная мука",
+                "кукурузная мука",
+                "яйца",
+                "сода",
+                "сметана",
+                "йогурт",
+                "стевия"
+            ],
+            "info": {
+                "kkal": 234,
+                "p": 9,
+                "f": 12,
+                "c": 18.8
+            }
+        },
+        {
+            "name": "ягодный кусок",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "рисовая мука",
+                "овсяная мука",
+                "стевия",
+                "растительное масло",
+                "вода",
+                "Клубничный сироп без сахара (апельсиновая цедра)",
+                "сироп топинамбура клубника",
+                "вишня",
+                "смородина",
+                "кукурузный крахмал",
+                "йогурт",
+                "творожный сыр",
+                "стевия",
+                "сода",
+                "уксус",
+                "Кокосовая стружка"
+            ],
+            "info": {
+                "kkal": 215,
+                "p": 6.2,
+                "f": 14.9,
+                "c": 19
+            }
+        },
+        {
+            "name": "наполеон кусок",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "Мучная смесь без глютена",
+                "Рисовая мука",
+                "яйцо",
+                "сливочное масло",
+                "кокосовый сахар (мёд)",
+                "стевия",
+                "молоко",
+                "яйцо",
+                "Кукурузный крахмал",
+                "стевия",
+                "сироп топинамбура",
+                "йогурт"
+            ],
+            "info": {
+                "kkal": 280,
+                "p": 7.8,
+                "f": 14.9,
+                "c": 21.5
+            }
+        },
+        {
+            "name": "чизкейк черника кусок",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "рисовая мука",
+                "полбяная мука",
+                "кукурузная мука",
+                "яйца",
+                "мед",
+                "сироп топинамбура",
+                "сливочное масло",
+                "сода",
+                "творожный сыр",
+                "сливки 33%",
+                "стевия",
+                "Кукурузный крахмал",
+                "какао",
+                "черника",
+                "Ежевика"
+            ],
+            "info": {
+                "kkal": 237,
+                "p": 4.6,
+                "f": 17.5,
+                "c": 15.5
+            }
+        },
+        {
+            "name": "карамельный чизкейк кусок",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "сливочное масло",
+                "рисовая мука",
+                "полбяная мука",
+                "кукурузная мука",
+                "яйца",
+                "творожный сыр",
+                "сливки 33%",
+                "стевия",
+                "Сироп топинамбура",
+                "Кукурузный крахмал"
+            ],
+            "info": {
+                "kkal": 265,
+                "p": 6,
+                "f": 21.5,
+                "c": 19.7
+            }
+        },
+        {
+            "name": "птичье молоко кусок",
+            "hasStevia": true,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": true,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "стевия",
+                "молоко",
+                "растительное масло",
+                "рисовая мука",
+                "разрыхлитель",
+                "творожный сыр",
+                "сливки 33%",
+                "агар агар",
+                "молочный шоколад"
+            ],
+            "info": {
+                "kkal": 213,
+                "p": 4.9,
+                "f": 16.4,
+                "c": 11.3
+            }
+        },
+        {
+            "name": "веганский сырок",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": true,
+            "withoutFlour": true,
+            "withoutGluten": true,
+            "withoutEggs": false,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "кешью",
+                "зеленая гречка",
+                "кокосовое масло",
+                "сок апельсина",
+                "какао",
+                "сироп топинамбура",
+                "какао масло",
+                "кокосовое молоко"
+            ],
+            "info": {
+                "kkal": 484,
+                "p": 7,
+                "f": 40,
+                "c": 27
+            }
+        },
+        {
+            "name": "творожный сырок",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "творог обезжиренный",
+                "сироп топинамбура",
+                "кокосовая стружка",
+                "кокосовое масло",
+                "какао масло",
+                "шоколад молочный на стевии"
+            ],
+            "info": {
+                "kkal": 230,
+                "p": 11,
+                "f": 16,
+                "c": 10
+            }
+        },
+        {
+            "name": "халва в шоколаде",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": true,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "семечки подсолнечника",
+                "арахис",
+                "мед",
+                "растительное масло",
+                "какао масло",
+                "какао",
+                "сироп топинамбура"
+            ],
+            "info": {
+                "kkal": 231,
+                "p": 5.8,
+                "f": 20,
+                "c": 18
+            }
+        },
+        {
+            "name": "вупипай",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "Кокосовые сливки",
+                "Яйца",
+                "Полбяная мука",
+                "Сироптопинамбура",
+                "Какао",
+                "Шоколад темныйна стевии",
+                "Сода",
+                "Разрыхлитель",
+                "Соль",
+                "Творожный сыр"
+            ],
+            "info": {
+                "kkal": 307,
+                "p": 6.5,
+                "f": 13.1,
+                "c": 41
+            }
+        },
+        {
+            "name": "кокосовый ломтик",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "Яйца",
+                "стевия",
+                "молока",
+                "рисовая мука",
+                "овсяная мука",
+                "какао",
+                "разрыхлитель",
+                "масло подсолнечное",
+                "творожный сыр",
+                "йогурт натуральный",
+                "кокосовая стружка",
+                "Сироп топинамбура",
+                "шоколад темный на стевии"
+            ],
+            "info": {
+                "kkal": 318,
+                "p": 6.5,
+                "f": 13.1,
+                "c": 26
+            }
+        },
+        {
+            "name": "шоколадный рулет",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "рисовая мука",
+                "яйцо",
+                "растительное масло",
+                "какао",
+                "стевия",
+                "разрыхлитель",
+                "молочный шоколадна стевии",
+                "кокосовые сливки",
+                "творожный сыр",
+                "Фундук",
+                "сироп топинамбура",
+                "кокосовый"
+            ],
+            "info": {
+                "kkal": 373,
+                "p": 8,
+                "f": 26,
+                "c": 25.7
+            }
+        },
+        {
+            "name": "вишневый рулет",
+            "hasStevia": true,
+            "hasTopinambura": false,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйца",
+                "рисовая мука",
+                "молоко",
+                "растительное масло",
+                "стевия",
+                "разрыхлитель",
+                "вишня",
+                "творожный сыр",
+                "йогурт",
+                "молочный шоколад на стевии",
+                "Миндальные лепестки"
+            ],
+            "info": {
+                "kkal": 266,
+                "p": 5,
+                "f": 20.1,
+                "c": 15.8
+            }
+        },
+        {
+            "name": "арахисовый сендвич",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": true,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "арахисовая паста",
+                "сироп топинамбура",
+                "какао",
+                "кукурузный крахмал",
+                "кокосовое масло",
+                "цельнозерновая мука"
+            ],
+            "info": {
+                "kkal": 642,
+                "p": 19.4,
+                "f": 45.2,
+                "c": 47
+            }
+        },
+        {
+            "name": "тарталетка пломбир",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": true,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "кокосовое молоко",
+                "стевия",
+                "творожный сыр",
+                "овсяная мука",
+                "миндаль",
+                "рисовая мука",
+                "кукурузный крахмал",
+                "сироп топинамбура",
+                "кокосовое масло",
+                "соль",
+                "Чёрная смородина",
+                "вода",
+                "агар",
+                "стевия"
+            ],
+            "info": {
+                "kkal": 295,
+                "p": 5.8,
+                "f": 19.4,
+                "c": 25.4
+            }
+        },
+        {
+            "name": "пирожоное картошка",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "Стевия",
+                "Яйцо",
+                "Рисовая мука",
+                "Овсяная мука",
+                "Молоко 0%",
+                "Растительное масло",
+                "Разрыхлитель",
+                "Творожный сыр",
+                "Какао",
+                "Миндаль",
+                "Сироп топинамбура"
+            ],
+            "info": {
+                "kkal": 207,
+                "p": 5.3,
+                "f": 9,
+                "c": 25.6
+            }
+        },
+        {
+            "name": "трайфл шоколад-банан",
+            "hasStevia": true,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "Рисовая мука",
+                "Овсяная мука",
+                "Йогурт",
+                "Стевия",
+                "Какао",
+                "Яйцо",
+                "Банан",
+                "Молоко 0%",
+                "Шоколад на стевии"
+            ],
+            "info": {
+                "kkal": 122,
+                "p": 7.1,
+                "f": 14.4,
+                "c": 19
+            }
+        },
+        {
+            "name": "трайфл ягодный",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "Молоко 0%",
+                "Рисовая мука",
+                "Кукурузная мука",
+                "Яйца",
+                "Сироп ягодный без сахара",
+                "Стевия",
+                "Разрыхлитель",
+                "Масло растительное",
+                "Ягоды",
+                "Кукурузный крахмал",
+                "Творожный сыр",
+                "Йогурт",
+                "Сироп топинамбура"
+            ],
+            "info": {
+                "kkal": 106,
+                "p": 6.2,
+                "f": 14.9,
+                "c": 19
+            }
+        },
+        {
+            "name": "банановый кекс",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "Банан",
+                "Яйца",
+                "Подсолнечное масло",
+                "сливочное",
+                "рисовая мука",
+                "кукурузная мука",
+                "овсяная мука",
+                "разрыхлитель",
+                "какао",
+                "топинамбур",
+                "Овсяные хлопья",
+                "семечки"
+            ],
+            "info": {
+                "kkal": 150,
+                "p": 2.1,
+                "f": 8.1,
+                "c": 16.8
+            }
+        },
+        {
+            "name": "кекс денди",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "Курага",
+                "Изюм",
+                "Клюква вяленая",
+                "Орехи лесные и грецкие",
+                "Коньяк",
+                "Зеленый чай",
+                "Миндальная мука",
+                "Мука: ц/з, кукурузная, рисовая",
+                "Яйца",
+                "Масло растит",
+                "Сироп топинамбура",
+                "Сок апельсина",
+                "Цедра апельсина",
+                "Разрыхлитель",
+                "молоко растительное"
+            ],
+            "info": {
+                "kkal": 401,
+                "p": 6.2,
+                "f": 15.2,
+                "c": 61.4
+            }
+        },
+        {
+            "name": "маффин",
+            "hasStevia": true,
+            "hasTopinambura": false,
+            "fewCalories": false,
+            "vegan": true,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "яйца",
+                "кокосовый сахар",
+                "сливочное масло масло",
+                "молоко растительное",
+                "разрыхлитель",
+                "овсяная мука",
+                "рисовая мука",
+                "Какао",
+                "Шоколад темный на стевии"
+            ],
+            "info": {
+                "kkal": 410,
+                "p": 7.7,
+                "f": 20,
+                "c": 48.9
+            }
+        },
+        {
+            "name": "творожный сырок с клубникой",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "Творог",
+                "творожный сыр",
+                "сливочное масло",
+                "Сироп топинамбура",
+                "клубника",
+                "стевия",
+                "молочный шоколад",
+                "какао масло"
+            ],
+            "info": {
+                "kkal": 238,
+                "p": 8.8,
+                "f": 17.8,
+                "c": 10.9
+            }
+        },
+        {
+            "name": "тирамису",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйца",
+                "стевия",
+                "рисовая мука",
+                "рикотта",
+                "йогурт",
+                "кофе",
+                "вода",
+                "Сироп топинамбура",
+                "какао"
+            ],
+            "info": {
+                "kkal": 132,
+                "p": 7.4,
+                "f": 6.8,
+                "c": 9.9
+            }
+        },
+        {
+            "name": "торт рафаэлло кусок",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "                ● яйца",
+                "● стевия",
+                "● кокосовое молоко",
+                "● кокосовое масло",
+                "● гарнец",
+                "● рисовая мука",
+                "● сода",
+                "● уксус",
+                "● кокосовая стружка",
+                "● кокосовое молоко",
+                "● Сироп топинамбура",
+                "● Кукурузный крахмал",
+                "● миндаль",
+                "● творожный сыр",
+                "● йогурт"
+            ],
+            "info": {
+                "kkal": 254,
+                "p": 5.5,
+                "f": 17.9,
+                "c": 18.4
+            }
+        },
+        {
+            "name": "чизкейк нью-йорк",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "слишвочное масло",
+                "рисовая мука",
+                "полбяная мука",
+                "кукурузная мука",
+                "Сода",
+                "творожный сыр",
+                "сливки 33%",
+                "стевия",
+                "Сироп топинамбура",
+                "яйца",
+                "Кукурузный крахмал"
+            ],
+            "info": {
+                "kkal": 324,
+                "p": 5.7,
+                "f": 26.7,
+                "c": 15.2
+            }
+        },
+        {
+            "name": "конфета ферреро",
+            "hasStevia": false,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": true,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "Фундук",
+                "Молочный шоколад",
+                "Арахисовая паста",
+                "Какао масло"
+            ],
+            "info": {
+                "kkal": 246,
+                "p": 6.3,
+                "f": 24,
+                "c": 8.1
+            }
+        },
+        {
+            "name": "сэндвич капрезе",
+            "hasStevia": false,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "ремесленный хлеб без сахара и дрожжей на закваске ручной работы",
+                "соус песто домашний (кедровые орехи, базилик, петрушка, оливковое масло, сок лимона, соль,перец, пармезан)",
+                "помидоры",
+                "моцарелла"
+            ],
+            "info": {
+                "kkal": 0,
+                "p": 0,
+                "f": 0,
+                "c": 0
+            }
+        },
+        {
+            "name": "сэндвич с лососем",
+            "hasStevia": false,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "ремесленный хлеб без сахара и дрожжей на закваске ручной работы",
+                "лосось",
+                "авокадо",
+                "творожный сыр",
+                "сливки",
+                "вяленый томат"
+            ],
+            "info": {
+                "kkal": 0,
+                "p": 0,
+                "f": 0,
+                "c": 0
+            }
+        },
+        {
+            "name": "сэндвич с курицей",
+            "hasStevia": false,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "ремесленный хлеб без сахара и дрожжей на закваске ручной работы",
+                "запеченная курица",
+                "запеченный болгарский перец",
+                "свежий огурец",
+                "салат",
+                "йогуртовый домашний соус"
+            ],
+            "info": {
+                "kkal": 0,
+                "p": 0,
+                "f": 0,
+                "c": 0
+            }
+        },
+        {
+            "name": "блинный торт",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Какао",
+                "Масло растительное",
+                "Молоко",
+                "Вода",
+                "Кокосовое масло",
+                "Мука",
+                "Соль",
+                "Сода",
+                "Стевия",
+                "Сметана",
+                "Топинамбур",
+                "Йогурт",
+                "Сыр творожный"
+            ],
+            "info": {
+                "kkal": 283,
+                "p": 5,
+                "f": 9.5,
+                "c": 25
+            }
+        },
+        {
+            "name": "эскимо картошка",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "шок бисквит",
+                "Сыр творожный",
+                "Топинамбур",
+                "Молоко",
+                "Смородина",
+                "Стевия",
+                "Крахмал кукурузный",
+                "Вода",
+                "Молочный шоколад",
+                "Какао масло"
+            ],
+            "info": {
+                "kkal": 320,
+                "p": 6,
+                "f": 28,
+                "c": 25
+            }
+        },
+        {
+            "name": "торт банан-карамель",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": true,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "мука рисовая",
+                "Яйцо",
+                "Молоко",
+                "Стевия",
+                "Масло сливочное",
+                "Крахмал кукурузный",
+                "Разрыхлитель",
+                "Сыр творожный",
+                "Йогурт",
+                "Сливки 33%",
+                "топинамбур",
+                "Банан"
+            ],
+            "info": {
+                "kkal": 255,
+                "p": 4.6,
+                "f": 19.4,
+                "c": 17.8
+            }
+        },
+        {
+            "name": "торт банан-ананас",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": true,
+            "withoutGluten": true,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Грецкий орех",
+                "Рисовая мука",
+                "Банан",
+                "Корица",
+                "Ананас",
+                "Сыр творожный",
+                "Стевия",
+                "Сливки 33%",
+                "Йогурт",
+                "Куркума",
+                "Разрыхлитель",
+                "Масло растительное топинамбур"
+            ],
+            "info": {
+                "kkal": 297,
+                "p": 4.8,
+                "f": 23.7,
+                "c": 18.8
+            }
+        },
+        {
+            "name": "кинс-веган кейк",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": true,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": true,
+            "id": 9,
+            "ingredients": [
+                "миндаль",
+                "Курага",
+                "Кокосовая стружка",
+                "Масло кокосовое",
+                "Кешью",
+                "Кокосовое молоко",
+                "Клубника",
+                "Смородина",
+                "Топинамбур",
+                "Вода"
+            ],
+            "info": {
+                "kkal": 228,
+                "p": 4,
+                "f": 17.3,
+                "c": 16.8
+            }
+        },
+        {
+            "name": "торт суфле малина кусок",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Стевия",
+                "Мука рисовая",
+                "Кокосовая стружка",
+                "Подсолнечное масло",
+                "Кокосовое молоко",
+                "Молоко",
+                "Шоколад белый",
+                "Агар",
+                "Топинамбур",
+                "Сыр творожный",
+                "Йогурт",
+                "Малина",
+                "Крахмал кукурузный"
+            ],
+            "info": {
+                "kkal": 231,
+                "p": 0,
+                "f": 0,
+                "c": 0
+            }
+        },
+        {
+            "name": "торт маковый с лимоном",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": true,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Масло растительное",
+                "Молоко",
+                "Стевия",
+                "Рисовая мука",
+                "Разрыхлитель",
+                "Мак",
+                "Желтки",
+                "Лимонный сок",
+                "Цедра лимона",
+                "Масло сливочное",
+                "Сыр творожный",
+                "Сливки 33%",
+                "Йогурт",
+                "топинамбур"
+            ],
+            "info": {
+                "kkal": 240,
+                "p": 5.8,
+                "f": 33,
+                "c": 11
+            }
+        },
+        {
+            "name": "торт финики-чернослив",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Стевия",
+                "Молоко",
+                "Растительное масло",
+                "Мука рисовая",
+                "Мука овсяная",
+                "Разрыхлитель",
+                "Какао",
+                "Сыр творожный",
+                "Йогурт",
+                "Сливки 33%",
+                "Финики",
+                "Вода",
+                "Чернослив",
+                "Грецкий орех"
+            ],
+            "info": {
+                "kkal": 268,
+                "p": 5.8,
+                "f": 20,
+                "c": 18
+            }
+        },
+        {
+            "name": "медовик с малиной",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": true,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Мёд",
+                "Топинамбур",
+                "Масло сливочное",
+                "Мука рисовая",
+                "Мука кукурузная",
+                "Мука полбяная",
+                "Йогурт",
+                "Сыр творожный",
+                "Малина"
+            ],
+            "info": {
+                "kkal": 255,
+                "p": 5,
+                "f": 10,
+                "c": 28
+            }
+        },
+        {
+            "name": "сырок с карамелью",
+            "hasStevia": false,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": true,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "творог",
+                "Сыр творожный",
+                "Топинамбур",
+                "Масло сливочное",
+                "Сливки 33%",
+                "Какао масло",
+                "Молочный шоколад"
+            ],
+            "info": {
+                "kkal": 282,
+                "p": 10,
+                "f": 21,
+                "c": 12
+            }
+        },
+        {
+            "name": "маффин сникерс",
+            "hasStevia": true,
+            "hasTopinambura": false,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Стевия",
+                "Масло подсолнечное",
+                "Молоко",
+                "Рисовая мука",
+                "Овсяная мука",
+                "Какао",
+                "Разрыхлитель",
+                "Сыр творожный",
+                "Сливки 33%",
+                "Топинамбур",
+                "Арахис"
+            ],
+            "info": {
+                "kkal": 280,
+                "p": 6,
+                "f": 19,
+                "c": 18
+            }
+        },
+        {
+            "name": "конфета с арахисовой пастой",
+            "hasStevia": false,
+            "hasTopinambura": false,
+            "fewCalories": false,
+            "vegan": true,
+            "withoutFlour": false,
+            "withoutGluten": true,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "молочный шоколад",
+                "Какао масло",
+                "Арахисовая паста",
+                "Кокосовое масло",
+                "Кокосовая мука"
+            ],
+            "info": {
+                "kkal": 594,
+                "p": 5,
+                "f": 6,
+                "c": 35
+            }
+        },
+        {
+            "name": "торт медовик шоколадный",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Масло сливочное",
+                "Топинамбур",
+                "Мёд",
+                "Сода",
+                "Рисовая мука",
+                "Полбяная мука",
+                "Кукурузная мука",
+                "Какао",
+                "Сыр творожный",
+                "Йогурт",
+                "Стевия"
+            ],
+            "info": {
+                "kkal": 223,
+                "p": 5,
+                "f": 6,
+                "c": 35
+            }
+        },
+        {
+            "name": "торт морковный",
+            "hasStevia": true,
+            "hasTopinambura": false,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Стевия",
+                "Масло подсолнечное",
+                "Изюм",
+                "Корица",
+                "Сода",
+                "Разрыхлитель",
+                "Мука рисовая",
+                "Морковь",
+                "Сыр творожный",
+                "Сливки 33%",
+                "Апельсин",
+                "Крахмал кукурузный"
+            ],
+            "info": {
+                "kkal": 259,
+                "p": 4,
+                "f": 19,
+                "c": 16
+            }
+        },
+        {
+            "name": "торт наполеон малина",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "рисовая мука",
+                "гарнец белый хлеб",
+                "масло сливочное",
+                "яйцо",
+                "кокосовый сахар или",
+                "топинамбур",
+                "стевия",
+                "молоко 0.5%",
+                "крахмал кукурузный",
+                "топинамбур",
+                "йогурт натуральный"
+            ],
+            "info": {
+                "kkal": 160,
+                "p": 3,
+                "f": 5,
+                "c": 23
+            }
+        },
+        {
+            "name": "сан-себастьян",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": true,
+            "withoutGluten": true,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "сливки 33%",
+                "Яйцо",
+                "Стевия",
+                "Топинамбур",
+                "Крахмал кукурузный",
+                "Сыр творожный"
+            ],
+            "info": {
+                "kkal": 283,
+                "p": 5,
+                "f": 25,
+                "c": 7
+            }
+        },
+        {
+            "name": "торт кофейный",
+            "hasStevia": true,
+            "hasTopinambura": false,
+            "fewCalories": true,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "яйцо",
+                "Молоко",
+                "Масло растительное",
+                "Стевия",
+                "Рисовая мука",
+                "Овсяная мука",
+                "Какао",
+                "Разрыхлитель",
+                "Кофе",
+                "Вода",
+                "Сыр творожный",
+                "Йогурт"
+            ],
+            "info": {
+                "kkal": 209,
+                "p": 5,
+                "f": 15,
+                "c": 10
+            }
+        },
+        {
+            "name": "суфле с фундуком",
+            "hasStevia": true,
+            "hasTopinambura": true,
+            "fewCalories": false,
+            "vegan": false,
+            "withoutFlour": false,
+            "withoutGluten": false,
+            "withoutEggs": false,
+            "withoutMilk": false,
+            "id": 9,
+            "ingredients": [
+                "агар-агар",
+                "йогурт",
+                "рисовая мука",
+                "овсяная мука",
+                "какао",
+                "обезжиренное молоко",
+                "творожный сыр",
+                "фундук",
+                "сироп топинамбура",
+                "стевия",
+                "разрыхлитель",
+                "подсолнечное масло",
+                "шоколад молочный на стевии",
+                "яйцо"
+            ],
+            "info": {
+                "kkal": 0,
+                "p": 0,
+                "f": 0,
+                "c": 0
+            }
         }
     ]
 }
