@@ -1,0 +1,9 @@
+.image {
+    width: 100%;
+    min-height:200px;
+}
+
+.headerText {
+    font-size: 17px;
+    line-height: 34px;
+}

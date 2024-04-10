@@ -2,6 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
 import { baseTestUrl } from "../../utils/scripts";
+import { Tdesserts } from "../../utils/Types";
 
 export const asyncAction = createAsyncThunk(
     'https://catfact.ninja/fact',
@@ -14,18 +15,22 @@ export const asyncAction = createAsyncThunk(
 
 type TinitialState = {
     asyncData: any,
-    unAsyncData: string
+    unAsyncData: string,
+    desserts: [Tdesserts?];
+    status: string
 }
 
 const initialState: TinitialState = {
     asyncData: [],
-    unAsyncData: ''
+    unAsyncData: '',
+    desserts: [],
+    status: ''
 }
 
-export const fetchTest = createAsyncThunk(
+export const getDesserts = createAsyncThunk(
     'test/fetchTest',
     async function() {
-        const response: any = await fetch(`${baseTestUrl}/employees`)
+        const response: any = await fetch(`${baseTestUrl}/desserts`)
         const data = response.json()
         return data
 
@@ -45,13 +50,14 @@ export const testSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchTest.pending, (state, action) => {
-            state.asyncData = 'loading'
+        builder.addCase(getDesserts.pending, (state) => {
+            state.status = 'loading'
         })
-        builder.addCase(fetchTest.fulfilled, (state, action) => {
-            state.asyncData = action.payload
+        builder.addCase(getDesserts.fulfilled, (state, action) => {
+            state.desserts = action.payload
+            state.status = "resolved"
         })
-        builder.addCase(fetchTest.rejected, (state, action) => {
+        builder.addCase(getDesserts.rejected, (state, action) => {
             state.asyncData = 'какая-то ошибка снова'
         })
     },

@@ -4,7 +4,7 @@ import { getDataOfPlan } from "../../services/actions/StatisticsAction";
 import { useDispatch } from "react-redux";
 import { useAppDispatch, useAppSelector } from "../../services/store"; 
 import { close, open } from "../../services/slices/ShirnSlice";
-import { click, fetchTest } from "../../services/slices/TestSlice";
+import { click, getDesserts } from "../../services/slices/TestSlice";
 
 const StatisticsPage = () => {
 
@@ -12,7 +12,7 @@ const StatisticsPage = () => {
     const somethink = useAppSelector(state => state.StatisticReducer.completedPlan);
     const data = useAppSelector(state => state.TestSlice.asyncData);
     const getinfo = () => {
-        dispatch(fetchTest())
+        dispatch(getDesserts())
         console.log(data)
     }
 

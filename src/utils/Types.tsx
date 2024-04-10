@@ -10,6 +10,27 @@ export type Temployee = {
     id: any;
 }
 
+export type Tdesserts = {
+    name: string,
+    url?: string,
+    hasStevia: boolean,
+    hasTopinambura: boolean,
+    fewCalories: boolean,
+    vegan: boolean,
+    withoutFlour: boolean,
+    withoutGluten: boolean,
+    withoutEggs: boolean,
+    withoutMilk: boolean,
+    id: number,
+    ingredients: [string],
+    info: {
+        "kkal": number,
+        "p": number,
+        "f": number,
+        "c": number
+    }
+}
+
 export type TnewEmployee = {
     name: string;
     age: number | string;

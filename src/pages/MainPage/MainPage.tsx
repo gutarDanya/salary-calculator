@@ -11,14 +11,6 @@ export const MainPage: React.FC<Props> = ({title}) => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    fetch(`${baseTestUrl}/desserts`)
-    .then((res) => {
-        return res.json()
-    })
-    .then((res) => {
-        console.log(res)
-    })
-
     let pageActive = false;
 
     const currentKPI = plan.needenPlan <= plan.total ? 0.07 : 0.05;

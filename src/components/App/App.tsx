@@ -15,6 +15,7 @@ import StatisticsPage from '../../pages/StatisticsPage/StatisticsPage';
 import LoginPage from '../../pages/LoginPage/LoginPage';
 import { checkUserAuth } from '../../services/actions/LoginAction';
 import { useAppDispatch, useAppSelector } from '../../services/store';
+import Desserts from '../../pages/Desserts/Desserts';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             <Route path='/' element={<MainPage title='сотрудники' />} />
             <Route path='/statistics' element={<StatisticsPage />} />
             <Route path='/settings' element={<SettingsPage />} />
+            <Route path='/desserts' element={<Desserts />} />
           </Routes>
   
           {backgroundLocation && <Routes>
