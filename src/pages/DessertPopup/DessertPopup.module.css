@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column:first-of-type {
+    margin-right: 20px;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+}
+
+.ingredients {
+    height: 250px;
+    background-color: gainsboro;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.ingredient {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.ingredient:first-of-type {
+    margin-top: 0;
+}
+
+.button {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fddc36;
+}

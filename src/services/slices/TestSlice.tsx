@@ -17,14 +17,48 @@ type TinitialState = {
     asyncData: any,
     unAsyncData: string,
     desserts: [Tdesserts?];
-    status: string
+    status: string,
+    currentDessert: Tdesserts
 }
 
 const initialState: TinitialState = {
     asyncData: [],
     unAsyncData: '',
     desserts: [],
-    status: ''
+    status: '',
+    currentDessert: {
+        "name": "дессерт",
+        "url": "",
+        "hasStevia": true,
+        "hasTopinambura": false,
+        "fewCalories": true,
+        "vegan": false,
+        "withoutFlour": false,
+        "withoutGluten": false,
+        "withoutEggs": false,
+        "withoutMilk": false,
+        "id": 57,
+        "ingredients": [
+            "яйцо",
+            "Молоко",
+            "Масло растительное",
+            "Стевия",
+            "Рисовая мука",
+            "Овсяная мука",
+            "Какао",
+            "Разрыхлитель",
+            "Кофе",
+            "Вода",
+            "Сыр творожный",
+            "Йогурт"
+        ],
+        "info": {
+            "kkal": 209,
+            "p": 5,
+            "f": 15,
+            "c": 10
+        }
+    }
 }
 
 export const getDesserts = createAsyncThunk(
@@ -47,6 +81,9 @@ export const testSlice = createSlice({
     reducers: {
         click(state, action: PayloadAction<string>) {
             state.unAsyncData = action.payload
+        },
+        getCurrentDessert(state, action: PayloadAction<number>) {
+             state.currentDessert = state.desserts.find((dessert) => {return dessert!.id === action.payload})!
         }
     },
     extraReducers: (builder) => {
@@ -63,5 +100,5 @@ export const testSlice = createSlice({
     },
 })
 
-export const {click} = testSlice.actions;
+export const {click, getCurrentDessert} = testSlice.actions;
 export default testSlice.reducer

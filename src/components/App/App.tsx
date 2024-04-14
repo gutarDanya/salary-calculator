@@ -16,6 +16,8 @@ import LoginPage from '../../pages/LoginPage/LoginPage';
 import { checkUserAuth } from '../../services/actions/LoginAction';
 import { useAppDispatch, useAppSelector } from '../../services/store';
 import Desserts from '../../pages/Desserts/Desserts';
+import DessertPage from '../../pages/DessertPage/DessertPage';
+import DessertPopup from '../../pages/DessertPopup/DesserPopup';
 
 
 function App() {
@@ -53,6 +55,12 @@ function App() {
             <Route path='/add-employe' element={
               <Modal title='добавить сотрудника' handleClose={closePopup}>
                 <AddEmployee />
+              </Modal>
+            } />
+
+            <Route path='/desserts/:id' element={
+              <Modal title='Состав' handleClose={closePopup}>
+                <DessertPopup />
               </Modal>
             } />
           </Routes>

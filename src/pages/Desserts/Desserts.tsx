@@ -16,8 +16,6 @@ const Desserts = () => {
     const shirmStatus = useAppSelector(state => state.InputReducer.shirmStatus)
     const desserts = useAppSelector(state => state.TestSlice.desserts)
 
-    console.log(desserts)
-
 
     return (
         <div className={styles.page}>
