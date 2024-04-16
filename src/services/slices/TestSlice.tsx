@@ -1,4 +1,4 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk, current } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
 import { baseTestUrl } from "../../utils/scripts";
@@ -77,25 +77,29 @@ export const testSlice = createSlice({
         getFilteredDesserts(state, action: PayloadAction<TdessertsFilter>) {
             const { withoutGluten, withoutEggs, withoutFlour, withoutMilk, fewCalories, vegan, hasStevia, hasTopinambura } = action.payload
 
-            // let currentArr = withoutGluten ? state.desserts.filter((dessert) => { return dessert?.withoutGluten != false }) : state.desserts!;
             
-            state.filterderDesserts = state.desserts && state.desserts.length > 0 && state.desserts.filter((dessert) => { return (
-                withoutGluten ? dessert?.withoutGluten == true : dessert
-                    && withoutEggs ? dessert.withoutEggs == true : dessert
-                    && withoutFlour ? dessert.withoutFlour == true : dessert
-                    && withoutMilk ? dessert.withoutMilk == true : dessert
-                    && fewCalories ? dessert.vegan == true : dessert)}) || [state.currentDessert]
-            // currentArr = withoutEggs ? currentArr.filter((dessert) => { return dessert?.withoutEggs != false }) : currentArr;
+            // state.filterderDesserts = state.desserts && state.desserts.length > 0 && state.desserts.filter((dessert) => {
+            //     return dessert.withoutGluten != 
+            // }) || [state.currentDessert]
 
-            // currentArr = withoutFlour ? currentArr.filter((dessert) => { return dessert?.withoutFlour != false }) : currentArr;
 
-            // currentArr = withoutMilk ? currentArr.filter((dessert) => { return dessert?.withoutMilk != false }) : currentArr;
+            let currentArr = state.desserts;
 
-            // currentArr = fewCalories ? currentArr.filter((dessert) => { return dessert?.fewCalories != false }) : currentArr;
+            withoutGluten ? currentArr = currentArr.filter((dessert) => {return dessert.withoutGluten === true}) : console.log('не выполнен без глютена');
 
-            // currentArr = vegan ? currentArr.filter((dessert) => { return dessert?.vegan != false }) : currentArr;
+            withoutEggs ? currentArr = currentArr.filter((dessert) => {return dessert.withoutEggs === true}) : console.log('не выполнен без яиц');
 
-            // state.filterderDesserts = [...currentArr]
+            withoutFlour ? currentArr = currentArr.filter((dessert) => {return dessert.withoutFlour === true}) : console.log('не выполнен без муки');
+
+            withoutMilk ? currentArr = currentArr.filter((dessert) => {return dessert.withoutMilk === true}) : console.log('не выполнен без молока');
+
+            fewCalories ? currentArr = currentArr.filter((dessert) => {return dessert.fewCalories === true}) : console.log('не выполнен низкокалорийное');
+
+            vegan ? currentArr = currentArr.filter((dessert) => {return dessert.vegan === true}) : console.log('вне ыполнен веган');
+
+            console.log(currentArr)
+
+            state.filterderDesserts = currentArr
         }
     },
     extraReducers: (builder) => {
