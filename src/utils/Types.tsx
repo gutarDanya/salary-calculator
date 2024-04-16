@@ -31,6 +31,16 @@ export type Tdesserts = {
     }
 }
 
+export type TdessertsFilter = {
+    withoutGluten?: boolean,
+    vegan?: boolean,
+    withoutFlour?: boolean,
+    withoutEggs?: boolean,
+    withoutMilk?: boolean,
+    fewCalories?: boolean,
+    hasTopinambura?: boolean,
+    hasStevia?: boolean
+}
 export type TnewEmployee = {
     name: string;
     age: number | string;

@@ -43,3 +43,8 @@
   border: 0;
   border-bottom: 2px solid;
 }
+
+.input:focus {
+  border: none;
+  border-bottom: 2px solid #f24da9;
+}

@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
 import { baseTestUrl } from "../../utils/scripts";
-import { Tdesserts } from "../../utils/Types";
+import { Tdesserts, TdessertsFilter } from "../../utils/Types";
 
 export const asyncAction = createAsyncThunk(
     'https://catfact.ninja/fact',
@@ -16,9 +16,10 @@ export const asyncAction = createAsyncThunk(
 type TinitialState = {
     asyncData: any,
     unAsyncData: string,
-    desserts: [Tdesserts?];
+    desserts: Array<Tdesserts>;
     status: string,
-    currentDessert: Tdesserts
+    currentDessert: Tdesserts,
+    filterderDesserts: Array<Tdesserts>
 }
 
 const initialState: TinitialState = {
@@ -26,6 +27,7 @@ const initialState: TinitialState = {
     unAsyncData: '',
     desserts: [],
     status: '',
+    filterderDesserts: [],
     currentDessert: {
         "name": "дессерт",
         "url": "",
@@ -38,20 +40,7 @@ const initialState: TinitialState = {
         "withoutEggs": false,
         "withoutMilk": false,
         "id": 57,
-        "ingredients": [
-            "яйцо",
-            "Молоко",
-            "Масло растительное",
-            "Стевия",
-            "Рисовая мука",
-            "Овсяная мука",
-            "Какао",
-            "Разрыхлитель",
-            "Кофе",
-            "Вода",
-            "Сыр творожный",
-            "Йогурт"
-        ],
+        "ingredients": ['cum'],
         "info": {
             "kkal": 209,
             "p": 5,
@@ -63,7 +52,7 @@ const initialState: TinitialState = {
 
 export const getDesserts = createAsyncThunk(
     'test/fetchTest',
-    async function() {
+    async function () {
         const response: any = await fetch(`${baseTestUrl}/desserts`)
         const data = response.json()
         return data
@@ -83,7 +72,30 @@ export const testSlice = createSlice({
             state.unAsyncData = action.payload
         },
         getCurrentDessert(state, action: PayloadAction<number>) {
-             state.currentDessert = state.desserts.find((dessert) => {return dessert!.id === action.payload})!
+            state.currentDessert = state.desserts.find((dessert) => { return dessert!.id === action.payload }) || state.currentDessert
+        },
+        getFilteredDesserts(state, action: PayloadAction<TdessertsFilter>) {
+            const { withoutGluten, withoutEggs, withoutFlour, withoutMilk, fewCalories, vegan, hasStevia, hasTopinambura } = action.payload
+
+            // let currentArr = withoutGluten ? state.desserts.filter((dessert) => { return dessert?.withoutGluten != false }) : state.desserts!;
+            
+            state.filterderDesserts = state.desserts && state.desserts.length > 0 && state.desserts.filter((dessert) => { return (
+                withoutGluten ? dessert?.withoutGluten == true : dessert
+                    && withoutEggs ? dessert.withoutEggs == true : dessert
+                    && withoutFlour ? dessert.withoutFlour == true : dessert
+                    && withoutMilk ? dessert.withoutMilk == true : dessert
+                    && fewCalories ? dessert.vegan == true : dessert)}) || [state.currentDessert]
+            // currentArr = withoutEggs ? currentArr.filter((dessert) => { return dessert?.withoutEggs != false }) : currentArr;
+
+            // currentArr = withoutFlour ? currentArr.filter((dessert) => { return dessert?.withoutFlour != false }) : currentArr;
+
+            // currentArr = withoutMilk ? currentArr.filter((dessert) => { return dessert?.withoutMilk != false }) : currentArr;
+
+            // currentArr = fewCalories ? currentArr.filter((dessert) => { return dessert?.fewCalories != false }) : currentArr;
+
+            // currentArr = vegan ? currentArr.filter((dessert) => { return dessert?.vegan != false }) : currentArr;
+
+            // state.filterderDesserts = [...currentArr]
         }
     },
     extraReducers: (builder) => {
@@ -91,7 +103,8 @@ export const testSlice = createSlice({
             state.status = 'loading'
         })
         builder.addCase(getDesserts.fulfilled, (state, action) => {
-            state.desserts = action.payload
+            state.desserts = action.payload;
+            state.filterderDesserts = action.payload;
             state.status = "resolved"
         })
         builder.addCase(getDesserts.rejected, (state, action) => {
@@ -100,5 +113,5 @@ export const testSlice = createSlice({
     },
 })
 
-export const {click, getCurrentDessert} = testSlice.actions;
+export const { click, getCurrentDessert, getFilteredDesserts } = testSlice.actions;
 export default testSlice.reducer
