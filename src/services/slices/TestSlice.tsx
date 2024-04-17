@@ -19,7 +19,8 @@ type TinitialState = {
     desserts: Array<Tdesserts>;
     status: string,
     currentDessert: Tdesserts,
-    filterderDesserts: Array<Tdesserts>
+    filterderDesserts: Array<Tdesserts>,
+    findedDessert: Array<Tdesserts>
 }
 
 const initialState: TinitialState = {
@@ -47,7 +48,8 @@ const initialState: TinitialState = {
             "f": 15,
             "c": 10
         }
-    }
+    },
+    findedDessert: []
 }
 
 export const getDesserts = createAsyncThunk(
@@ -77,12 +79,6 @@ export const testSlice = createSlice({
         getFilteredDesserts(state, action: PayloadAction<TdessertsFilter>) {
             const { withoutGluten, withoutEggs, withoutFlour, withoutMilk, fewCalories, vegan, hasStevia, hasTopinambura } = action.payload
 
-            
-            // state.filterderDesserts = state.desserts && state.desserts.length > 0 && state.desserts.filter((dessert) => {
-            //     return dessert.withoutGluten != 
-            // }) || [state.currentDessert]
-
-
             let currentArr = state.desserts;
 
             withoutGluten ? currentArr = currentArr.filter((dessert) => {return dessert.withoutGluten === true}) : console.log('не выполнен без глютена');
@@ -97,9 +93,14 @@ export const testSlice = createSlice({
 
             vegan ? currentArr = currentArr.filter((dessert) => {return dessert.vegan === true}) : console.log('вне ыполнен веган');
 
-            console.log(currentArr)
+
 
             state.filterderDesserts = currentArr
+        },
+        findDessert(state, action: PayloadAction<string>) {
+            action.payload != ''
+            ? state.findedDessert = state.filterderDesserts.filter((dessert) => {return dessert.name.toLowerCase().includes(action.payload.toLowerCase())})
+            : state.findedDessert = state.filterderDesserts
         }
     },
     extraReducers: (builder) => {
@@ -117,5 +118,5 @@ export const testSlice = createSlice({
     },
 })
 
-export const { click, getCurrentDessert, getFilteredDesserts } = testSlice.actions;
+export const { click, getCurrentDessert, getFilteredDesserts, findDessert } = testSlice.actions;
 export default testSlice.reducer

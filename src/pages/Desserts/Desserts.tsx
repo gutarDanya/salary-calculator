@@ -1,22 +1,29 @@
 import React, { useEffect, useState } from "react";
 import styles from './Desserts.module.css';
 import { useAppDispatch, useAppSelector } from "../../services/store";
-import { getDesserts, getFilteredDesserts } from "../../services/slices/TestSlice";
+import { findDessert, getDesserts, getFilteredDesserts } from "../../services/slices/TestSlice";
 import Dessert from "./Dessert/Dessert";
 import { Tdesserts } from "../../utils/Types";
 
 const Desserts = () => {
 
-    const [filters, setFilters] = useState({fewCalories: false, vegan: false, withoutFlour: false, withoutGluten: false, withoutEggs: false, withoutMilk: false})
+    const [filters, setFilters] = useState({fewCalories: false, vegan: false, withoutFlour: false, withoutGluten: false, withoutEggs: false, withoutMilk: false});
+    const [nameOfDessert, setNameOfDessert] = useState('')
 
     const dispatch = useAppDispatch()
 
     useEffect(() => {
         dispatch(getDesserts())
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        if (nameOfDessert != '')
+        dispatch(findDessert(nameOfDessert));
+    }, [nameOfDessert])
 
     const shirmStatus = useAppSelector(state => state.InputReducer.shirmStatus);
-    const desserts = useAppSelector(state => state.TestSlice.filterderDesserts);
+    const desserts = useAppSelector(state => state.TestSlice.findedDessert);
+    
 
     const submitForm = (evt: any) => {
         evt.preventDefault()
@@ -36,7 +43,7 @@ const Desserts = () => {
                     })}
                 </div>
                 <form className={styles.findContainer}>
-                    <input className={`input ${styles.input}`} type='text' placeholder="дессерт" />
+                    <input className={`input ${styles.input}`} type='text' placeholder="дессерт" value={nameOfDessert} onChange={e => setNameOfDessert(e.target.value)}/>
                     <label className={styles.checkboxContainer}>
                         <input type='checkbox' onClick={() => setFilters({...filters, withoutGluten: !filters.withoutGluten})}/>
                         <p className={styles.checkboxText}>без глютена</p>
@@ -62,11 +69,11 @@ const Desserts = () => {
                         <p className={styles.checkboxText} >без молока</p>
                     </label>
                     <label className={styles.checkboxContainer}>
-                        <input type="checkbox" />
+                        <input type="checkbox" checked={true}/>
                         <p className={styles.checkboxText} >топинамбура</p>
                     </label>
                     <label className={styles.checkboxContainer}>
-                        <input type="checkbox" />
+                        <input type="checkbox" checked={true}/>
                         <p className={styles.checkboxText} >стевия</p>
                     </label>
                     <button type='submit' className={styles.submitSerch} onClick={submitForm}>Применить</button>
