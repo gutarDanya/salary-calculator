@@ -74,7 +74,7 @@ export const testSlice = createSlice({
             state.unAsyncData = action.payload
         },
         getCurrentDessert(state, action: PayloadAction<number>) {
-            state.currentDessert = state.desserts.find((dessert) => { return dessert!.id === action.payload }) || state.currentDessert
+            state.currentDessert = state.desserts.find((dessert) => { return dessert!.id == action.payload }) || state.currentDessert
         },
         getFilteredDesserts(state, action: PayloadAction<TdessertsFilter>) {
             const { withoutGluten, withoutEggs, withoutFlour, withoutMilk, fewCalories, vegan, hasStevia, hasTopinambura } = action.payload

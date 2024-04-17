@@ -25,14 +25,14 @@ const DessertPopup = () => {
     return (
         <div className={styles.container}>
             <div className={styles.column}>
-                <img className={styles.image} alt={dessert!.name} />
+                <img className={styles.image} src={dessert.url} alt={dessert!.name} />
                 <h2 className={styles.dessertName}>{dessert.name}</h2>
             </div>
             <div className={styles.column}>
                 <div className={styles.ingredients}>
-                    {dessert.ingredients && dessert.ingredients.length > 0 && dessert.ingredients.map((ingredient: string) => {
+                    {dessert.ingredients && dessert.ingredients.length > 0 && dessert.ingredients.map((ingredient: string, key: number) => {
                         return (
-                            <p className={styles.ingredient}>{ingredient}</p>
+                            <p className={styles.ingredient}>{key}) {ingredient}</p>
                         )
                     })}
                 </div>
