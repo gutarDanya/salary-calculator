@@ -12,7 +12,7 @@ const DessertPopup = () => {
 
     const arr = id?.split(':')
 
-        dispatch(getCurrentDessert(Number(arr?.[1])))
+    dispatch(getCurrentDessert(Number(arr?.[1])))
 
     const dessert = useAppSelector(state => state.TestSlice.currentDessert)
 
@@ -32,7 +32,7 @@ const DessertPopup = () => {
                 <div className={styles.ingredients}>
                     {dessert.ingredients && dessert.ingredients.length > 0 && dessert.ingredients.map((ingredient: string, key: number) => {
                         return (
-                            <p className={styles.ingredient}>{key}) {ingredient}</p>
+                            <p className={styles.ingredient}>{key + 1}) {ingredient}</p>
                         )
                     })}
                 </div>

@@ -4,15 +4,6 @@ import { PayloadAction } from "@reduxjs/toolkit";
 import { baseTestUrl } from "../../utils/scripts";
 import { Tdesserts, TdessertsFilter } from "../../utils/Types";
 
-export const asyncAction = createAsyncThunk(
-    'https://catfact.ninja/fact',
-    async function (thunkAPI) {
-        const response = await fetch('https://catfact.ninja/fact');
-        const data = await response.json();
-        return data
-    }
-)
-
 type TinitialState = {
     asyncData: any,
     unAsyncData: string,

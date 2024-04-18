@@ -1,0 +1,45 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    border-radius: 25px;
+    transition: all 2s ease-in;
+    text-decoration: none;
+}
+
+.avatar {
+    width: 50Px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 25px;
+}
+
+.bio {
+    width: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.employeeName {
+    color: black;
+}
+
+.salary {
+    color: black;
+}
+
+.working {
+    background-color: green;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    margin: auto 7px auto 5px;
+}
+
+.chilling {
+    background-color: red;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    margin: auto 7px auto 5px;
+}

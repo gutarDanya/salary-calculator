@@ -7,7 +7,7 @@ import { Tdesserts } from "../../utils/Types";
 
 const Desserts = () => {
 
-    const [filters, setFilters] = useState({fewCalories: false, vegan: false, withoutFlour: false, withoutGluten: false, withoutEggs: false, withoutMilk: false});
+    const [filters, setFilters] = useState({fewCalories: false, vegan: false, withoutFlour: false, withoutGluten: false, withoutEggs: false, withoutMilk: false,});
     const [nameOfDessert, setNameOfDessert] = useState('')
 
     const dispatch = useAppDispatch()
@@ -22,7 +22,7 @@ const Desserts = () => {
     }, [nameOfDessert])
 
     const shirmStatus = useAppSelector(state => state.InputReducer.shirmStatus);
-    const desserts = useAppSelector(state => state.TestSlice.findedDessert);
+    const desserts = useAppSelector(state => state.TestSlice.filterderDesserts);
     
 
     const submitForm = (evt: any) => {

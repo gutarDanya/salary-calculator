@@ -3,7 +3,6 @@ import TInputActions, {
     ADD_NEW_EMPLOYEE,
     AGE_OF_NEW_EMPLOYEE,
     AVATAR_OF_NEW_EMPLOYEE,
-    LOAD_EMPLOYEES,
     NAME_OF_NEW_EMPLOYEE,
     SALARY_OF_NEW_EMPLOYEE,
     SWITCH_SHIRM_STATUS
@@ -56,12 +55,6 @@ const InputReducer = (state: IinitialState = initialState, action: TInputActions
             return {
                 ...state,
                 avatarNewEmployee: action.payload
-            }
-        }
-        case LOAD_EMPLOYEES: {
-            return {
-                ...state,
-                employees: action.payload
             }
         }
         case ADD_NEW_EMPLOYEE: {

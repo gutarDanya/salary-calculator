@@ -6,7 +6,6 @@ export const AGE_OF_NEW_EMPLOYEE: 'AGE_OF_NEW_EMPLOYEE' = 'AGE_OF_NEW_EMPLOYEE';
 export const AVATAR_OF_NEW_EMPLOYEE: 'AVATAR_OF_NEW_EMPLOYEE' = 'AVATAR_OF_NEW_EMPLOYEE';
 export const LOGIN_NEW_EMPLOYEE: 'LOGIN_NEW_EMPLOYEE' = 'LOGIN_NEW_EMPLOYEE';
 export const PASSWORD_NEW_EMPLOYEE: 'PASSWORD_NEW_EMPLOYEE' = 'PASSWORD_NEW_EMPLOYEE';
-export const LOAD_EMPLOYEES: 'LOAD_EMPLOYEES' ='LOAD_EMPLOYEES';
 export const ADD_NEW_EMPLOYEE: 'ADD_NEW_EMPLOYEE' = 'ADD_NEW_EMPLOYEE';
 export const SWITCH_SHIRM_STATUS: 'SWITCH_SHIRM_STATUS' = 'SWITCH_SHIRM_STATUS';
 
@@ -16,15 +15,6 @@ interface IaddNewEmployee {
 
 export const addNewEmployee = () => {
     return {type: ADD_NEW_EMPLOYEE}
-}
-
-interface IloadEmployees {
-    readonly type: typeof LOAD_EMPLOYEES;
-    payload: Array<Temployee>
-}
-
-export const loadEmployees = (employyes: Array<Temployee>) => {
-    return {type: LOAD_EMPLOYEES, payload: employyes}
 }
 
 interface InameOfNewEmployee {
@@ -93,7 +83,6 @@ type TInputActions = InameOfNewEmployee |
 IsalaryOfNewEmployee |
 IageOfNewEmployee |
 IavatarOfNewEmployee |
-IloadEmployees |
 IaddNewEmployee |
 IswitchShirmStatus |
 IloginOfNewEmployee |

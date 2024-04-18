@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Temployee } from "../../utils/Types";
 import { useAppSelector } from "../../services/store";
 import { baseTestUrl } from "../../utils/scripts";
+import EmployeeCard from "../../components/EmployeeCard/EmployeeCard";
 
 export const MainPage: React.FC<Props> = ({title}) => {
 
@@ -15,7 +16,7 @@ export const MainPage: React.FC<Props> = ({title}) => {
 
     const currentKPI = plan.needenPlan <= plan.total ? 0.07 : 0.05;
 
-    const employees = useAppSelector(state => state.InputReducer.employees);
+    const employees = useAppSelector(state => state.EmployeeSlice.employees);
 
     const shirmOpened = useAppSelector(state => state.InputReducer.shirmStatus);
 
@@ -48,16 +49,7 @@ export const MainPage: React.FC<Props> = ({title}) => {
                         return acc + item.revenue * currentKPI
                     }, 0)
                     return (
-                        <div className={styles.cart} key={employee.id}>
-                            <div className={styles.bio}>
-                            {employee.avatar
-                             ? <img className={styles.avatar} src={employee.avatar} alt='аватар' /> 
-                             : <img className={styles.avatar} src='https://cdn-icons-png.flaticon.com/512/18/18601.png' />}
-                             <div className={employee.worked ? styles.working : styles.chilling} />
-                            <p className={styles.employeeName}>{employee.name}</p>
-                            </div>
-                            <p className={styles.salary}>{employee.salary * employee.hours.length + totalKPI}</p>
-                        </div>
+                        <EmployeeCard employee={employee} totalKPI={totalKPI} />
                     )
                 })}
             </div>

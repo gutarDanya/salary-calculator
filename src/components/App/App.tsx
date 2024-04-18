@@ -8,8 +8,6 @@ import { SettingsPage } from '../../pages/SettingsPage/SettingsPage';
 import { useLocation } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 import AddEmployee from '../../pages/AddEmploye/AddEmployee';
-import { loadEmployees } from '../../services/actions/InputAction';
-import { employeesData } from '../../utils/utilsData';
 import Shirm from '../Shirm/Shirm';
 import StatisticsPage from '../../pages/StatisticsPage/StatisticsPage';
 import LoginPage from '../../pages/LoginPage/LoginPage';
@@ -18,6 +16,8 @@ import { useAppDispatch, useAppSelector } from '../../services/store';
 import Desserts from '../../pages/Desserts/Desserts';
 import DessertPage from '../../pages/DessertPage/DessertPage';
 import DessertPopup from '../../pages/DessertPopup/DesserPopup';
+import EmployeePage from '../../pages/EmployeePage/EmployeePage';
+import { getEmployees } from '../../services/slices/EmployeeSlice';
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
   }
 
   useEffect(() => {
-    dispatch(loadEmployees(employeesData))
+    dispatch(getEmployees())
     dispatch(checkUserAuth())
   },[])
 
@@ -61,6 +61,12 @@ function App() {
             <Route path='/desserts/:id' element={
               <Modal title='Состав' handleClose={closePopup}>
                 <DessertPopup />
+              </Modal>
+            } />
+
+            <Route path='/:id' element={
+              <Modal title='Сотрудник' handleClose={closePopup}>
+                <EmployeePage />
               </Modal>
             } />
           </Routes>

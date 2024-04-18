@@ -5,13 +5,15 @@ import { configureStore } from "@reduxjs/toolkit";
 import StatisticReducer from "./reducers/StatisticsReducer";
 import ShirmSlice from "./slices/ShirnSlice";
 import TestSlice from "./slices/TestSlice";
+import EmployeeSlice from "./slices/EmployeeSlice";
 
 export const rootReducer = combineReducers({
     InputReducer,
     LoginReducer,
     StatisticReducer,
     ShirmSlice,
-    TestSlice
+    TestSlice,
+    EmployeeSlice
 })
 
 export const setupStore = () => {

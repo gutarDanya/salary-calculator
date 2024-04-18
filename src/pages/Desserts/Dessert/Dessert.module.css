@@ -8,4 +8,13 @@
 .headerText {
     font-size: 17px;
     line-height: 34px;
+    text-decoration: none;
+    color: black;
+}
+
+.dessert {
+    text-decoration: none;
+    border: 1px solid #f24da9;
+    border-radius: 10px;
+    overflow: hidden;
 }

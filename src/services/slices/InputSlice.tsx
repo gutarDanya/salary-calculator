@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Temployee } from "../../utils/Types";
 import { PayloadAction } from "@reduxjs/toolkit";
-import { asyncAction } from "./TestSlice";
 
 interface IinitialState {
     employees: Array<Temployee>
