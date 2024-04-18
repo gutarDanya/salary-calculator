@@ -98,9 +98,9 @@ export const testSlice = createSlice({
             state.filterderDesserts = currentArr
         },
         findDessert(state, action: PayloadAction<string>) {
-            action.payload != ''
-            ? state.findedDessert = state.filterderDesserts.filter((dessert) => {return dessert.name.toLowerCase().includes(action.payload.toLowerCase())})
-            : state.findedDessert = state.filterderDesserts
+            action.payload == ''
+            ? state.findedDessert = state.filterderDesserts
+            : state.findedDessert = state.filterderDesserts.filter((dessert) => {return dessert.name.toLowerCase().includes(action.payload.toLowerCase())})
         }
     },
     extraReducers: (builder) => {
@@ -110,6 +110,7 @@ export const testSlice = createSlice({
         builder.addCase(getDesserts.fulfilled, (state, action) => {
             state.desserts = action.payload;
             state.filterderDesserts = action.payload;
+            state.findedDessert = action.payload;
             state.status = "resolved"
         })
         builder.addCase(getDesserts.rejected, (state, action) => {
