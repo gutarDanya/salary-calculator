@@ -21,7 +21,9 @@
                 }
             ],
             "worked": true,
-            "id": 12451
+            "id": 12451,
+            "status": "бариста",
+            "tel": "228-1488-555-322"
         },
         {
             "name": "Даня",
@@ -57,7 +59,9 @@
                 }
             ],
             "worked": false,
-            "avatar": "https://sun9-20.userapi.com/s/v1/if2/K0tmu-xAOioYNrJXZbrjGEqjGSbZ3FWtrnzFzY7r7gqMMVcKTg1wv8SO8qXQEcMZ5W34AI5u0QdlcwnFBtViahzD.jpg?quality=95&crop=308,831,1260,1260&as=50x50,100x100,200x200,400x400&ava=1&u=DeqxvZ208FKABsJlX_SwUqra8DyoOKND9I3WuHCgri0&cs=200x200"
+            "avatar": "https://sun9-20.userapi.com/s/v1/if2/K0tmu-xAOioYNrJXZbrjGEqjGSbZ3FWtrnzFzY7r7gqMMVcKTg1wv8SO8qXQEcMZ5W34AI5u0QdlcwnFBtViahzD.jpg?quality=95&crop=308,831,1260,1260&as=50x50,100x100,200x200,400x400&ava=1&u=DeqxvZ208FKABsJlX_SwUqra8DyoOKND9I3WuHCgri0&cs=200x200",
+            "status": "Супер-босс",
+            "tel": "8-901-107-00-93"
         },
         {
             "name": "Кирилл",
@@ -84,7 +88,9 @@
                     "revenue": 1241
                 }
             ],
-            "worked": false
+            "worked": false,
+            "status": "бариста",
+            "tel": "8-800-555-35-35"
         },
         {
             "name": "Иван",
@@ -111,7 +117,9 @@
                     "revenue": 1200
                 }
             ],
-            "worked": true
+            "worked": true,
+            "status": "старший бариста",
+            "tel": "8-800-555-35-35"
         },
         {
             "name": "Камиля",
@@ -138,7 +146,9 @@
                     "revenue": 1200
                 }
             ],
-            "worked": true
+            "worked": true,
+            "status": "уволена",
+            "tel": "8-800-555-35-35"
         },
         {
             "name": "Алина",
@@ -149,7 +159,9 @@
             "salary": 50,
             "hours": [],
             "worked": false,
-            "avatar": "https://sun9-35.userapi.com/s/v1/if2/vdSLHxTSPoy_C7WjkTugAb4bBKy3k3SK5LSrP_Tx2OxnqeFuXgI5dOkCAQ0O_nScbYF1geto-lEdU-XTuwCbJbQD.jpg?quality=95&crop=148,0,2341,2341&as=50x50,100x100,200x200,400x400&ava=1&u=gTYz8mTTWjST1sMNjT4PCdzITXzAweMa8L97EwD46g8&cs=200x200"
+            "avatar": "https://sun9-35.userapi.com/s/v1/if2/vdSLHxTSPoy_C7WjkTugAb4bBKy3k3SK5LSrP_Tx2OxnqeFuXgI5dOkCAQ0O_nScbYF1geto-lEdU-XTuwCbJbQD.jpg?quality=95&crop=148,0,2341,2341&as=50x50,100x100,200x200,400x400&ava=1&u=gTYz8mTTWjST1sMNjT4PCdzITXzAweMa8L97EwD46g8&cs=200x200",
+            "status": "стажёр",
+            "tel": "228-1488-555-322"
         }
     ],
     "desserts": [

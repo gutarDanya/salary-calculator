@@ -4,10 +4,12 @@ export type Temployee = {
     hours: Array<Thour>;
     salary: number;
     worked: boolean;
-    avatar?: string | null | undefined;
+    avatar?: string | undefined;
     login: string;
     password: string;
     id: any;
+    status: string,
+    tel: ''
 }
 
 export type Tdesserts = {
@@ -47,7 +49,7 @@ export type TnewEmployee = {
     hours?: Array<Thour>;
     salary: number;
     worked?: boolean;
-    avatar?: string | null | undefined;
+    avatar?: string | undefined;
     login: string;
     password: string;
 }

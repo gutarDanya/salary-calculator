@@ -21,7 +21,9 @@ const initialState: TinitialState = {
         worked: false,
         login: '',
         password: '',
-        id: 0
+        id: 0,
+        status: '',
+        tel: ''
     }
 }
 

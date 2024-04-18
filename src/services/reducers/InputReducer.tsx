@@ -69,7 +69,9 @@ const InputReducer = (state: IinitialState = initialState, action: TInputActions
                     hours: [],
                     login: state.login,
                     password: state.password,
-                    id: new Date
+                    id: new Date,
+                    status: 'стажёр',
+                    tel: ''
                 }]
             }
         }

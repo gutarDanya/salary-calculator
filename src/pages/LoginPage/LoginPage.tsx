@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import styles from './LoginPage.module.css';
 import { setLoginStatus, setLoginValue, setPasswordValue } from "../../services/actions/LoginAction";
-import { employeesData } from "../../utils/utilsData";
 import { setCookie } from "../../utils/Cookie";
-import { useAppDispatch } from "../../services/store";
+import { useAppDispatch, useAppSelector } from "../../services/store";
 
 const LoginPage = () => {
     const dispatch = useAppDispatch();
 
     const [loginValue, changeLoginValue] = useState('');
     const [passwordValue, changePasswordValue] = useState('');
+
+    const employeesData = useAppSelector((state) => state.EmployeeSlice.employees)
+
 
     const submitLogin = (evt: any) => {
         evt.preventDefault();
