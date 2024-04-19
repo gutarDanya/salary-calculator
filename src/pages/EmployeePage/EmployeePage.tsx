@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './EmployeePage.module.css';
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../services/store";
 import { getCurrentEmployee } from "../../services/slices/EmployeeSlice";
 
 const EmployeePage = () => {
+
+    const [hoursListOpened, setHoursListOpened] = useState(false)
 
     const dispatch = useAppDispatch();
 
@@ -37,6 +39,22 @@ const EmployeePage = () => {
                     <p className={styles.text}>номер: {employee.tel}</p>
                 </div>
             </div>
+            <div className={styles.hoursInfo}>
+                <button className={styles.hoursButton} type='button' onClick={() => {setHoursListOpened(!hoursListOpened)}}>список часов <p className={styles.icon}>{hoursListOpened ? "▼" : "▲"}</p></button>
+                {hoursListOpened && (
+                    <div className={styles.hoursContainer}>
+                        {employee.hours && employee.hours.length > 0 && employee.hours.map((info) => {
+                            return (
+                                <div className={styles.hourContainer}>
+                                    <p className={styles.hourText}>{info.date}</p>
+                                    <p className={styles.hourText}>{info.revenue}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                )}
+            </div>
+            <button type="submit" className={styles.submitButton}>Изменить</button>
         </div>
     )
 }
