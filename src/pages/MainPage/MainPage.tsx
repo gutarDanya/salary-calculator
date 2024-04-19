@@ -49,7 +49,7 @@ export const MainPage: React.FC<Props> = ({title}) => {
                         return acc + item.revenue * currentKPI
                     }, 0)
                     return (
-                        <EmployeeCard employee={employee} totalKPI={totalKPI} />
+                        <EmployeeCard employee={employee} totalKPI={totalKPI} key={i}/>
                     )
                 })}
             </div>

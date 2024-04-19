@@ -7,7 +7,7 @@ const Dessert:React.FC<Props>  = ({dessert}) => {
 
     const location = useLocation()
     return (
-        <Link to={`:${dessert.id}`} state={{background: location}} className={styles.dessert}>
+        <Link to={`${dessert.id}`} state={{background: location}} className={styles.dessert}>
             <img src={dessert.url} alt={dessert.name} className={styles.image} />
             <h2 className={styles.headerText}>{dessert.name}</h2>
         </Link>

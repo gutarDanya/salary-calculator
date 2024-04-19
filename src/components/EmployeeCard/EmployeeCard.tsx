@@ -9,7 +9,7 @@ const EmployeeCard: React.FC<Props> = ({ employee, totalKPI }) => {
 
 
     return (
-        <Link to={`/:${employee.id}`} state={{background: location}} className={styles.cart} key={employee.id}>
+        <Link to={`/${employee.id}`} state={{background: location}} className={styles.cart} key={employee.id}>
             <div className={styles.bio}>
                 {employee.avatar
                     ? <img className={styles.avatar} src={employee.avatar} alt='аватар' />

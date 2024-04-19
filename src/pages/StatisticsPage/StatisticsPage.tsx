@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { useAppDispatch, useAppSelector } from "../../services/store"; 
 import { close, open } from "../../services/slices/ShirnSlice";
 import { click, getDesserts } from "../../services/slices/TestSlice";
+import { updateEmployee } from "../../services/slices/EmployeeSlice";
 
 const StatisticsPage = () => {
 
@@ -12,8 +13,7 @@ const StatisticsPage = () => {
     const somethink = useAppSelector(state => state.StatisticReducer.completedPlan);
     const data = useAppSelector(state => state.TestSlice.asyncData);
     const getinfo = () => {
-        dispatch(getDesserts())
-        console.log(data)
+        dispatch(updateEmployee())
     }
 
     getDataOfPlan()

@@ -16,8 +16,9 @@ import { useAppDispatch, useAppSelector } from '../../services/store';
 import Desserts from '../../pages/Desserts/Desserts';
 import DessertPage from '../../pages/DessertPage/DessertPage';
 import DessertPopup from '../../pages/DessertPopup/DesserPopup';
-import EmployeePage from '../../pages/EmployeePage/EmployeePage';
+import EmployeePopup from '../../pages/EmployeePopup/EmployeePopup';
 import { getEmployees } from '../../services/slices/EmployeeSlice';
+import EmployeePage from '../../pages/EmployeePage/EmployeePage';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
             <Route path='/statistics' element={<StatisticsPage />} />
             <Route path='/settings' element={<SettingsPage />} />
             <Route path='/desserts' element={<Desserts />} />
+            <Route path='/change-employee/:id' element={<EmployeePage />}/>
           </Routes>
   
           {backgroundLocation && <Routes>
@@ -66,7 +68,7 @@ function App() {
 
             <Route path='/:id' element={
               <Modal title='Сотрудник' handleClose={closePopup}>
-                <EmployeePage />
+                <EmployeePopup />
               </Modal>
             } />
           </Routes>

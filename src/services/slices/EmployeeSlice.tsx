@@ -2,7 +2,8 @@ import { createAsyncThunk, current } from "@reduxjs/toolkit";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { baseTestUrl } from "../../utils/scripts";
 import { Temployee } from "../../utils/Types";
-
+import { RootState } from "../store";
+import { store } from "../store";
 
 type TinitialState = {
     employees: Array<Temployee>
@@ -29,12 +30,28 @@ const initialState: TinitialState = {
 
 
 export const getEmployees = createAsyncThunk(
-    'employees/fetchEmployees',
+    'employees/getEmployees',
     async function () {
         const response: any = await fetch(`${baseTestUrl}/employees`)
         const data = response.json()
         console.log(data)
         return data
+    }
+)
+
+export const updateEmployee = createAsyncThunk(
+    'employees/updateEmployee',
+    async function() {
+        const {employees} = store.getState().EmployeeSlice
+
+        console.log(employees)
+        const response: any = await fetch(`${baseTestUrl}/employees`, {
+            method: "PATCH",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({})
+        })
     }
 )
 

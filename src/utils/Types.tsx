@@ -9,7 +9,7 @@ export type Temployee = {
     password: string;
     id: any;
     status: string,
-    tel: ''
+    tel: string
 }
 
 export type Tdesserts = {

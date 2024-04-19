@@ -10,9 +10,8 @@ const DessertPopup = () => {
 
     const { id } = useParams();
 
-    const arr = id?.split(':')
 
-    dispatch(getCurrentDessert(Number(arr?.[1])))
+    dispatch(getCurrentDessert(Number(id)))
 
     const dessert = useAppSelector(state => state.TestSlice.currentDessert)
 
