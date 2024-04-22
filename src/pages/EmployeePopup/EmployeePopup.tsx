@@ -8,6 +8,7 @@ const EmployeePopup = () => {
     const navigate = useNavigate()
     const dispatch = useAppDispatch();
     const [hoursListOpened, setHoursListOpened] = useState(false);
+    const employees = useAppSelector((state) => state.EmployeeSlice.employees)
     const { id } = useParams();
 
     const employee = useAppSelector((state) => state.EmployeeSlice.currentEmployee);
@@ -19,14 +20,15 @@ const EmployeePopup = () => {
 
     useEffect(() => {
         dispatch(getCurrentEmployee(Number(id)))
-    }, [])
+    }, [employees])
 
     const changeUser = () => {
         navigate(`/change-employee/${Number(id)}`)
     }
 
     return (
-        <div className={styles.container}>
+        employee.name != ''
+        ? (<div className={styles.container}>
             <div className={styles.info}>
                 <div className={styles.bioContaienr}>
                 {employee.avatar
@@ -59,7 +61,8 @@ const EmployeePopup = () => {
                 )}
             </div>
             <button type="submit" className={styles.submitButton} onClick={changeUser}>Изменить</button>
-        </div>
+        </div>)
+        : null
     )
 }
 

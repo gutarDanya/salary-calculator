@@ -10,8 +10,11 @@ const DessertPopup = () => {
 
     const { id } = useParams();
 
+    const desserts = useAppSelector(state => state.TestSlice.desserts);
 
+useEffect(() => {
     dispatch(getCurrentDessert(Number(id)))
+},[desserts])
 
     const dessert = useAppSelector(state => state.TestSlice.currentDessert)
 
@@ -22,7 +25,8 @@ const DessertPopup = () => {
     }
 
     return (
-        <div className={styles.container}>
+        dessert.name != "дессерт"
+        ? (<div className={styles.container}>
             <div className={styles.column}>
                 <img className={styles.image} src={dessert.url} alt={dessert!.name} />
                 <h2 className={styles.dessertName}>{dessert.name}</h2>
@@ -37,7 +41,8 @@ const DessertPopup = () => {
                 </div>
                 <button type='button' className={styles.button}>изменить состав</button>
             </div>
-        </div>
+        </div>)
+        : null
     )
 
 }
