@@ -22,13 +22,14 @@ import EmployeePage from '../../pages/EmployeePage/EmployeePage';
 
 
 function App() {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const location = useLocation();
-  const navigate = useNavigate();
 
-  const userLogined = useAppSelector(state => state.LoginReducer.loginStatus);
+  //u wanna create function of login/logout
+  const userLogined = "login"
 
-  const closePopup = () => {
+  function closePopup () {
     navigate(-1)
   }
 

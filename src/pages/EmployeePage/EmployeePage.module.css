@@ -37,3 +37,8 @@
     margin: 0;
     border: none;
 }
+
+.hoursContainer {
+    max-height: 500px;
+    overflow-y: scroll;
+}

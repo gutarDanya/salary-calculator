@@ -18,7 +18,7 @@ export const MainPage: React.FC<Props> = ({title}) => {
 
     const employees = useAppSelector(state => state.EmployeeSlice.employees);
 
-    const shirmOpened = useAppSelector(state => state.InputReducer.shirmStatus);
+    const shirmOpened = useAppSelector(state => state.AppSlice.shirmStatus);
 
     const addEmploye = () => {
         navigate('/add-employe', {state: {background: location}})

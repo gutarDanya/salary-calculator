@@ -1,19 +1,15 @@
 import { combineReducers } from "redux";
-import InputReducer from "./reducers/InputReducer";
-import LoginReducer from "./reducers/LoginReducer";
 import { configureStore } from "@reduxjs/toolkit";
 import StatisticReducer from "./reducers/StatisticsReducer";
-import ShirmSlice from "./slices/ShirnSlice";
+import AppSlice from "./slices/AppSlice";
 import TestSlice from "./slices/TestSlice";
 import EmployeeSlice from "./slices/EmployeeSlice";
 
 export const rootReducer = combineReducers({
-    InputReducer,
-    LoginReducer,
     StatisticReducer,
-    ShirmSlice,
     TestSlice,
-    EmployeeSlice
+    EmployeeSlice,
+    AppSlice
 })
 
 export const setupStore = () => {

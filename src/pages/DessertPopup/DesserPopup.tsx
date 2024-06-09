@@ -39,7 +39,7 @@ useEffect(() => {
                         )
                     })}
                 </div>
-                <button type='button' className={styles.button}>изменить состав</button>
+                <button type='button' className={styles.button} disabled>изменить состав</button>
             </div>
         </div>)
         : null

@@ -4,6 +4,7 @@ import { baseTestUrl } from "../../utils/scripts";
 import { Temployee } from "../../utils/Types";
 import { RootState } from "../store";
 import { store } from "../store";
+import AddEmployee from "../../pages/AddEmploye/AddEmployee";
 
 type TinitialState = {
     employees: Array<Temployee>
@@ -61,6 +62,17 @@ export const EmployeeSlice = createSlice({
     reducers: {
         getCurrentEmployee(state, action: PayloadAction<number>) {
             state.currentEmployee = state.employees.find((employee) => {return employee.id == action.payload}) || state.currentEmployee
+        },
+        addEmployee(state, action: PayloadAction<{name: string, age: number | string, salary: number, avatar: string | undefined, login: string, password: string, id: string}>) {
+            const newEmployee: Temployee = {
+                ...action.payload,
+                hours: [],
+                worked: false,
+                status: "бариста",
+                tel: ""
+            }
+
+            state.employees = [...state.employees, newEmployee]
         }
     },
     extraReducers: (builder) => {
@@ -76,5 +88,5 @@ export const EmployeeSlice = createSlice({
     }
 })
 
-export const { getCurrentEmployee } = EmployeeSlice.actions
+export const { getCurrentEmployee, addEmployee } = EmployeeSlice.actions
 export default EmployeeSlice.reducer

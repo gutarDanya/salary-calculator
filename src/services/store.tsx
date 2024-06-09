@@ -1,11 +1,7 @@
 import { applyMiddleware, createStore, compose, Middleware } from "redux";
 import { rootReducer } from "./indexReducer";
-import { thunk } from "redux-thunk";
-import { composeWithDevTools } from "@reduxjs/toolkit/dist/devtoolsExtension";
 import { configureStore } from "@reduxjs/toolkit";
-import LoginReducer from "./reducers/LoginReducer";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import ShirmSlice from "./slices/ShirnSlice";
 
 const stringMiddleware: Middleware = (store) => (next) => (action) => {
     if (typeof action === 'string') {
@@ -23,8 +19,6 @@ export const store = configureStore({
         thunk: true
       })
   })
-
-console.log(store)
 
 export type RootState = ReturnType<typeof store.getState>
 

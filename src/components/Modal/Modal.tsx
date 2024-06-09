@@ -7,8 +7,8 @@ const modalRoot = document.getElementById('popup');
 
 const Modal: React.FC<Props> = ({title, handleClose, children}) => {
     return ReactDOM.createPortal(
-        <Overlay>
-            <div className={styles.popup}>
+        <Overlay handleClose={handleClose}>
+            <div className={styles.popup} onClick={e => e.stopPropagation()}>
                 <div className={styles.container}>
                     <h1 className={styles.header}>{title}</h1>
                     <button onClick={handleClose} className={styles.closeButton}>+</button>

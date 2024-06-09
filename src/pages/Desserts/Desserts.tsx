@@ -21,7 +21,7 @@ const Desserts = () => {
         dispatch(findDessert(nameOfDessert));
     }, [nameOfDessert])
 
-    const shirmStatus = useAppSelector(state => state.InputReducer.shirmStatus);
+    const shirmStatus = useAppSelector(state => state.AppSlice.shirmStatus)
     const desserts = useAppSelector(state => state.TestSlice.filterderDesserts);
     
 
