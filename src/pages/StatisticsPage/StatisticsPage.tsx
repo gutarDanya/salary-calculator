@@ -4,14 +4,14 @@ import { getDataOfPlan } from "../../services/actions/StatisticsAction";
 import { useDispatch } from "react-redux";
 import { useAppDispatch, useAppSelector } from "../../services/store"; 
 import { click, getDesserts } from "../../services/slices/TestSlice";
-import { updateEmployee } from "../../services/slices/EmployeeSlice";
+
 
 const StatisticsPage = () => {
 
     const dispatch = useAppDispatch();
     const somethink = useAppSelector(state => state.StatisticReducer.completedPlan);
     const getinfo = () => {
-        dispatch(updateEmployee())
+
     }
 
     getDataOfPlan()

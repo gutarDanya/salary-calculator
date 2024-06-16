@@ -23,14 +23,14 @@ export const useValidation = (value: any, validations: any) => {
                     setErrorText(`символов должно быть больше чем ${validations[validation]}`)
                 break;
                 case "minNumber":
-
+                    
                 break;
             }
         }
     }, [value])
 
     useEffect(() => {
-        if (isEmpty || minLenthError || isNumberError) {
+        if (isEmpty || minLenthError || isNumberError ) {
             setInputValid(false)
         } else {
             setInputValid(true)
@@ -52,11 +52,11 @@ export const useInput = (initialValue: any, validations: {isEmpty?: boolean, min
     const valid = useValidation(value, validations)
 
     const onChange = (e: any) => {
-        if (typeof e === "number") {
-            setValue(e)
-        } else {
             setValue(e.target.value)
-        }
+    }
+
+    const setState = (value: any ) => {
+        setValue(value)
     }
 
     const onBlur = (e: any) => {
@@ -67,6 +67,7 @@ export const useInput = (initialValue: any, validations: {isEmpty?: boolean, min
         value,
         onChange,
         onBlur,
+        setState,
         isDirty,
         ...valid
     }

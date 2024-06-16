@@ -1,10 +1,7 @@
 import { createAsyncThunk, current } from "@reduxjs/toolkit";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { baseTestUrl } from "../../utils/scripts";
-import { Temployee } from "../../utils/Types";
-import { RootState } from "../store";
-import { store } from "../store";
-import AddEmployee from "../../pages/AddEmploye/AddEmployee";
+import { Temployee, TnewEmployee } from "../../utils/Types";
 
 type TinitialState = {
     employees: Array<Temployee>
@@ -35,24 +32,72 @@ export const getEmployees = createAsyncThunk(
     async function () {
         const response: any = await fetch(`${baseTestUrl}/employees`)
         const data = response.json()
-        console.log(data)
         return data
     }
 )
 
-export const updateEmployee = createAsyncThunk(
-    'employees/updateEmployee',
-    async function() {
-        const {employees} = store.getState().EmployeeSlice
+export const updateUser = createAsyncThunk(
+    'users/updateUser',
+    async (employee: Temployee, { rejectWithValue, dispatch }) => {
 
-        console.log(employees)
-        const response: any = await fetch(`${baseTestUrl}/employees`, {
-            method: "PATCH",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify({})
-        })
+        try {
+            const response = await fetch(`${baseTestUrl}/employees/${employee.id}`, {
+                method: "PUT",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...employee
+                })
+            })
+                .then((res) => {
+                    res.json()
+                })
+                .then((res) => {
+                    dispatch(patchUser(employee))
+                })
+                .catch((err) => {
+                    console.log(err)
+                });
+            return response
+
+        } catch (err: any) {
+            return rejectWithValue(err.message)
+        }
+
+    }
+)
+
+export const AddUser = createAsyncThunk(
+    'users/addUser',
+    async (employee: TnewEmployee, { rejectWithValue, dispatch }) => {
+        const newEmpoloyee = {
+            ...employee,
+            hours: [],
+            worked: false,
+            status: "бариста",
+            tel: ""
+        }
+        try {
+            const response = await fetch(`${baseTestUrl}/employees`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...newEmpoloyee
+                })
+            })
+                .then(res => res.json())
+                .then((res) => {
+                    dispatch(addEmployee(newEmpoloyee))
+                })
+                .catch((err) => { console.log(err) })
+                return response
+
+        } catch (err: any) {
+            return rejectWithValue(err.message)
+        }
     }
 )
 
@@ -60,20 +105,21 @@ export const EmployeeSlice = createSlice({
     name: 'employees',
     initialState,
     reducers: {
-        getCurrentEmployee(state, action: PayloadAction<number>) {
-            state.currentEmployee = state.employees.find((employee) => {return employee.id == action.payload}) || state.currentEmployee
+        getCurrentEmployee(state, action: PayloadAction<string>) {
+            state.currentEmployee = state.employees.find((employee) => { return employee.id === action.payload }) || state.currentEmployee
         },
-        addEmployee(state, action: PayloadAction<{name: string, age: number | string, salary: number, avatar: string | undefined, login: string, password: string, id: string}>) {
-            const newEmployee: Temployee = {
-                ...action.payload,
-                hours: [],
-                worked: false,
-                status: "бариста",
-                tel: ""
-            }
+        
+        addEmployee(state, action: PayloadAction<Temployee>) {
+            state.employees = [...state.employees, action.payload]
+        },
 
-            state.employees = [...state.employees, newEmployee]
-        }
+        patchUser(state, action: PayloadAction<Temployee>) {
+            state.employees = state.employees.map((employee) => {return employee.id === action.payload.id 
+                ? action.payload
+                : employee
+            })
+        },
+
     },
     extraReducers: (builder) => {
         builder.addCase(getEmployees.pending, (state) => {
@@ -85,8 +131,11 @@ export const EmployeeSlice = createSlice({
         builder.addCase(getEmployees.rejected, (state, action) => {
             state.status = 'error' + action.payload
         })
+        builder.addCase(updateUser.rejected, (state, action) => {
+            state.status = 'error' + action.payload
+        })
     }
 })
 
-export const { getCurrentEmployee, addEmployee } = EmployeeSlice.actions
+export const { getCurrentEmployee, addEmployee, patchUser } = EmployeeSlice.actions
 export default EmployeeSlice.reducer

@@ -16,14 +16,14 @@ const EmployeePopup = () => {
         return acc + item.revenue
     }, 0)
 
-    dispatch(getCurrentEmployee(Number(id)))
+    dispatch(getCurrentEmployee(id!))
 
     useEffect(() => {
-        dispatch(getCurrentEmployee(Number(id)))
+        dispatch(getCurrentEmployee(id!))
     }, [employees])
 
     const changeUser = () => {
-        navigate(`/change-employee/${Number(id)}`)
+        navigate(`/change-employee/${id}`)
     }
 
     return (

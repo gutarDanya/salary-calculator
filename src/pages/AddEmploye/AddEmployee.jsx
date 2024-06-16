@@ -2,7 +2,7 @@ import React from "react";
 import styles from './AddEmployee.module.css';
 import { useAppDispatch } from "../../services/store";
 import { useInput } from "../../utils/hooks";
-import { addEmployee } from "../../services/slices/EmployeeSlice";
+import { AddUser } from "../../services/slices/EmployeeSlice";
 import {v4 as uuid4} from 'uuid'
 import BaseInput from "../../components/BaseInput/BaseInput";
 
@@ -21,7 +21,7 @@ const AddEmployee = () => {
         evt.preventDefault();
         const id = uuid4()
         console.log(id)
-        dispatch(addEmployee({name: nameInput.value, age: ageInput.value, salary: salaryInput.value, avatar: avatarInput.value,id: id, login: loginInput.value, password: passwordInput.value }))
+        dispatch(AddUser({name: nameInput.value, age: ageInput.value, salary: salaryInput.value, avatar: avatarInput.value,id: id, login: loginInput.value, password: passwordInput.value }))
     }
 
     return (

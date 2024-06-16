@@ -14,7 +14,7 @@ export const MainPage: React.FC<Props> = ({title}) => {
 
     let pageActive = false;
 
-    const currentKPI = plan.needenPlan <= plan.total ? 0.07 : 0.05;
+    const currentKPI = 0.05;
 
     const employees = useAppSelector(state => state.EmployeeSlice.employees);
 
@@ -28,16 +28,10 @@ export const MainPage: React.FC<Props> = ({title}) => {
         pageActive = true
     }, [])
 
-    const totalSxpenses = employees.reduce((acc: number, item: Temployee) => {
+    // const totalSxpenses = employees.reduce((acc: number, item: Temployee) => {
 
-        const totalKPI = item.hours.reduce((acc2, item2) => {
-            return acc2 + item2.revenue * currentKPI
-        }, 0)
-
-        return (
-            acc + (item.salary * item.hours.length + totalKPI)
-        )
-    }, 0)
+        
+    // }, 0)
 
     
     return(
@@ -45,16 +39,16 @@ export const MainPage: React.FC<Props> = ({title}) => {
             <h1 className={styles.title}>{title}</h1>
             <div className={styles.employeeContainer} style={shirmOpened ? {marginLeft: '260px', width: 'calc(100% - 260px)'} : {}}>
                 {employees && employees.length > 0 && employees.map((employee: Temployee, i: number) => {
-                    const totalKPI = employee.hours.reduce((acc, item) => {
+                    const totalKPI =employee.hours && employee.hours.length > 0 ? employee.hours.reduce((acc, item) => {
                         return acc + item.revenue * currentKPI
-                    }, 0)
+                    }, 0) : 0
                     return (
                         <EmployeeCard employee={employee} totalKPI={totalKPI} key={i}/>
                     )
                 })}
             </div>
             <button type="button" className={styles.addEmploye} onClick={addEmploye}>Добавить сотрудника</button>
-            <p className={styles.totalExpenses}>суммарные расходы: {totalSxpenses} ₽</p>
+            <p className={styles.totalExpenses}>суммарные расходы: ₽</p>
         </div>
     )
 }

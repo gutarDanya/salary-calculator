@@ -14,7 +14,6 @@ import LoginPage from '../../pages/LoginPage/LoginPage';
 import { checkUserAuth } from '../../services/actions/LoginAction';
 import { useAppDispatch, useAppSelector } from '../../services/store';
 import Desserts from '../../pages/Desserts/Desserts';
-import DessertPage from '../../pages/DessertPage/DessertPage';
 import DessertPopup from '../../pages/DessertPopup/DesserPopup';
 import EmployeePopup from '../../pages/EmployeePopup/EmployeePopup';
 import { getEmployees } from '../../services/slices/EmployeeSlice';

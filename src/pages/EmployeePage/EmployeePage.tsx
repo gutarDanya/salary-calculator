@@ -2,37 +2,56 @@ import React, { useEffect, useState } from "react";
 import styles from './EmployeePage.module.css';
 import { useAppDispatch, useAppSelector } from "../../services/store";
 import { useParams } from "react-router-dom";
-import { getCurrentEmployee } from "../../services/slices/EmployeeSlice";
+import { getCurrentEmployee, updateUser } from "../../services/slices/EmployeeSlice";
+import { useInput } from "../../utils/hooks";
+import BaseInput from "../../components/BaseInput/BaseInput";
 
 const EmployeePage = () => {
     const dispatch = useAppDispatch();
     const { id } = useParams();
     const employees = useAppSelector((state) => state.EmployeeSlice.employees)
     useEffect(() => {
-        dispatch(getCurrentEmployee(Number(id)))
+        dispatch(getCurrentEmployee(id!))
     }, [employees])
 
     const employee = useAppSelector(state => state.EmployeeSlice.currentEmployee);
     const [hoursListOpened, setHoursListOpened] = useState(false);
     const shirmOpened = useAppSelector(state => state.AppSlice.shirmStatus);
-    const [employeeData, setEmployeeData] = useState({})
+
+    let name = useInput(employee.name, {isEmpty: true})
+    let age = useInput(employee.age, {isNumber: true, isEmpty: true})
+    let avatar = useInput(employee.avatar);
+    let login = useInput(employee.login);
+    let salary = useInput(employee.salary, {isNumber: true});
+    let tel = useInput(employee.tel, {isEmpty: true, isNumber: true});
+    let password = useInput(employee.password, {isEmpty: true});
 
     useEffect(() => {
-        setEmployeeData({
-            age: employee.age,
-            avatar: employee.avatar,
-            hours: employee.hours,
-            id: employee.id,
-            login: employee.login,
-            name: employee.name,
-            password: employee.password,
-            salary: employee.salary,
-            status: employee.status,
-            tel: employee.tel,
-            worked: employee.worked
-        })
-    }, [employee])
+        name.setState(employee.name);
+        age.setState(employee.age);
+        avatar.setState(employee.avatar);
+        login.setState(employee.login);
+        salary.setState(employee.salary);
+        tel.setState(employee.tel)
+        password.setState(employee.password)
+    }, [employee]);
+    
+    function submit (e: React.MouseEvent<HTMLButtonElement>) {
+        e.preventDefault();
 
+        dispatch(updateUser({
+            name: name.value,
+            age: age.value,
+            avatar: avatar.value,
+            login: login.value,
+            salary: salary.value,
+            tel: tel.value,
+            password: password.value,
+            id: employee.id,
+            hours: employee.hours,
+            worked: employee.worked,
+            status: employee.status}))
+    }
 
     const totalKPI = employee.hours.reduce((acc, item) => {
         return (acc + employee.salary + item.revenue * 0.05)
@@ -47,46 +66,13 @@ const EmployeePage = () => {
                         ? <img className={styles.avatar} src={employee.avatar} alt='аватар' />
                         : <img className={styles.avatar} src='https://cdn-icons-png.flaticon.com/512/18/18601.png' />}
                     <div className={styles.infoContaiener}>
-                        <label className={styles.labalContainer}>
-                            Возраст
-                            <input name="age" className="input" type="number" value={employee.age} onChange={(e) => { setEmployeeData({ ...employeeData, age: Number(e.target.value) }) }} />
-                        </label>
-                        <label className={styles.labalContainer}>
-                            ссылка на аватар
-                            <input name="avatar" className="input" type="string" value={employee.avatar} onChange={(e) => { console.log(employeeData); setEmployeeData({ ...employeeData, avatar: e.target.value }) }} />
-                        </label>
-                        <label className={styles.labalContainer}>
-                            логин/почта
-                            <input name="login" className="input" type="email" value={employee.login} onChange={(e) => { setEmployeeData({ ...employeeData, login: e.target.value }) }} />
-                        </label>
-                        <label className={styles.labalContainer}>
-                            Имя
-                            <input name="name" className="input" type="name" value={employee.name} onChange={(e) => { setEmployeeData({ ...employeeData, name: e.target.value }) }} />
-                        </label>
-                        <label className={styles.labalContainer}>
-                            пароль
-                            <input name="paswword" className="input" type="text" value={employee.password} onChange={(e) => { setEmployeeData({ ...employeeData, password: e.target.value }) }} />
-                        </label>
-                        <label className={styles.labalContainer}>
-                            ставка
-                            <input name="salary" className="input" type="number" value={employee.salary} onChange={(e) => { setEmployeeData({ ...employeeData, salary: Number(e.target.value) }) }} />
-                        </label>
-                        <label className={styles.labalContainer}>
-                            должность
-                            <input name="status" className="input" type="text" value={employee.status} onChange={(e) => { setEmployeeData({ ...employeeData, status: e.target.value }) }} />
-                        </label>
-                        <label className={styles.labalContainer}>
-                            телефон
-                            <input name="tel" className="input" type="text" value={employee.tel} onChange={(e) => { setEmployeeData({ ...employeeData, tel: e.target.value }) }} />
-                        </label>
-                        <label className={styles.labalContainer}>
-                            статус работы
-                            <input name="worked" className="input" list="workedList" value={employee.worked ? "работает" : "чилит"} onChange={(e) => { setEmployeeData({ ...employeeData, worked: e.target.value === "работает" ? true : false }) }} />
-                        </label>
-                        <label className={styles.labalContainer}>
-                            Id-сотрудника
-                            <p className={`input ${styles.idOfEmployee}`}>{employee.id}</p>
-                        </label>
+                        <BaseInput input={name!} type='text' name='name' placeholder="Имя сотрудника" text="Имя сотрудника"/>
+                        <BaseInput input={age!} type='number' name='age' placeholder="возраст" text="Возраст"/>
+                        <BaseInput input={avatar!} type='text' name='avatar' placeholder="ссылка на аватар" text="аватар"/>
+                        <BaseInput input={login!} type='text' name='login' placeholder="лоин пользователя" text="логин"/>
+                        <BaseInput input={salary!} type='number' name='salary' placeholder="ставка" text="оклад/ч"/>
+                        <BaseInput input={tel!} type='number' name='telephone' placeholder="номер" text="номер сотрудника"/>
+                        <BaseInput input={password!} type='password' name='name' placeholder="пароль" text="пароль"/>
                     </div>
                 </div>
                 <button className={styles.hoursButton} type='button' onClick={() => { setHoursListOpened(!hoursListOpened) }}>список часов <p className={styles.icon}>{hoursListOpened ? "▼" : "▲"}</p></button>
@@ -102,6 +88,7 @@ const EmployeePage = () => {
                         })}
                     </div>
                 )}
+                <button type="submit" onClick={submit} className={styles.submitButton}>Сохранить изменения</button>
             </div>)
             : null)
 

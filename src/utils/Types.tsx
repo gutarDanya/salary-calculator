@@ -52,6 +52,7 @@ export type TnewEmployee = {
     avatar?: string | undefined;
     login: string;
     password: string;
+    id: string
 }
 
 type Thour = {

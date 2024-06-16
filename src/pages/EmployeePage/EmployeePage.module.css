@@ -42,3 +42,11 @@
     max-height: 500px;
     overflow-y: scroll;
 }
+
+.submitButton {
+    font-size: 24px;
+    margin: 20px auto 40px;
+    background-color: #fddc36;
+    border: 0;
+    color: #6c5e19;
+}
