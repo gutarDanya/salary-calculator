@@ -1,31 +1,6 @@
 {
   "employees": [
     {
-      "login": "superKatya@gmail.com",
-      "password": "114488",
-      "name": "Катя",
-      "age": 18,
-      "salary": 100,
-      "hours": [
-        {
-          "date": "17.03.2024",
-          "revenue": 1241
-        },
-        {
-          "date": "17.03.2024",
-          "revenue": 1241
-        },
-        {
-          "date": "17.03.2024",
-          "revenue": 1241
-        }
-      ],
-      "worked": true,
-      "id": "12451",
-      "status": "бариста",
-      "tel": "228-1488-555-322"
-    },
-    {
       "name": "гений плейбой филанпоп",
       "age": "22",
       "avatar": "https://sun9-20.userapi.com/s/v1/if2/K0tmu-xAOioYNrJXZbrjGEqjGSbZ3FWtrnzFzY7r7gqMMVcKTg1wv8SO8qXQEcMZ5W34AI5u0QdlcwnFBtViahzD.jpg?quality=95&crop=308,831,1260,1260&as=50x50,100x100,200x200,400x400&ava=1&u=DeqxvZ208FKABsJlX_SwUqra8DyoOKND9I3WuHCgri0&cs=200x200",
@@ -64,39 +39,10 @@
       "status": "Супер-босс"
     },
     {
-      "name": "Кирилл",
-      "id": "12512512",
-      "login": "agressiveKid@gmail.com",
-      "password": "114488",
-      "age": 19,
-      "salary": 100,
-      "hours": [
-        {
-          "date": "17.03.2024",
-          "revenue": 1241
-        },
-        {
-          "date": "17.03.2024",
-          "revenue": 1241
-        },
-        {
-          "date": "17.03.2024",
-          "revenue": 1241
-        },
-        {
-          "date": "17.03.2024",
-          "revenue": 1241
-        }
-      ],
-      "worked": false,
-      "status": "бариста",
-      "tel": "8-800-555-35-35"
-    },
-    {
-      "name": "Иван-баранье ебло",
+      "name": "Иван",
       "age": 20,
       "login": "Ivan@gmail.com",
-      "salary": 110,
+      "salary": "228",
       "tel": "8-800-555-35-35",
       "password": "1144",
       "id": "56125",

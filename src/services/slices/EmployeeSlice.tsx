@@ -101,6 +101,23 @@ export const AddUser = createAsyncThunk(
     }
 )
 
+export const removeEmployee = createAsyncThunk(
+    "employees/remove",
+    async(employee: Temployee, {rejectWithValue, dispatch}) => {
+        try {
+            const response = await fetch(`${baseTestUrl}/employees/${employee.id}`, {
+                method: "DELETE"
+            })
+            .then(res => res.json())
+            .then(() => {dispatch(deleteEmployee(employee))})
+            .catch((err) => {console.log(err.message)})
+            return response
+        } catch (err: any) {
+            return rejectWithValue(err.message)
+        }
+    }
+)
+
 export const EmployeeSlice = createSlice({
     name: 'employees',
     initialState,
@@ -119,7 +136,9 @@ export const EmployeeSlice = createSlice({
                 : employee
             })
         },
-
+        deleteEmployee(state, action: PayloadAction<Temployee>) {
+            state.employees = state.employees.filter((employee) => {return employee.id !== action.payload.id})
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(getEmployees.pending, (state) => {
@@ -134,8 +153,11 @@ export const EmployeeSlice = createSlice({
         builder.addCase(updateUser.rejected, (state, action) => {
             state.status = 'error' + action.payload
         })
+        builder.addCase(removeEmployee.rejected, (state, action) => {
+            state.status = 'error' + action.payload
+        })
     }
 })
 
-export const { getCurrentEmployee, addEmployee, patchUser } = EmployeeSlice.actions
+export const { getCurrentEmployee, addEmployee, patchUser, deleteEmployee } = EmployeeSlice.actions
 export default EmployeeSlice.reducer
