@@ -83,7 +83,7 @@ const EmployeePage = () => {
                         <BaseInput input={salary!} type='number' name='salary' placeholder="ставка" text="оклад/ч"/>
                         <BaseInput input={tel!} type='number' name='telephone' placeholder="номер" text="номер сотрудника"/>
                         <BaseInput input={password!} type='password' name='name' placeholder="пароль" text="пароль"/>
-                        <button className={styles.removeEmployee} disabled={validity} onClick={e => {deleteEmployee(e)}} type="submit">Удалить сотрудника</button>
+                        <button className={styles.removeEmployee} onClick={e => {deleteEmployee(e)}} type="submit">Удалить сотрудника</button>
                     </div>
                 </div>
                 <button className={styles.hoursButton} type='button' onClick={() => { setHoursListOpened(!hoursListOpened) }}>список часов <p className={styles.icon}>{hoursListOpened ? "▼" : "▲"}</p></button>
@@ -99,7 +99,7 @@ const EmployeePage = () => {
                         })}
                     </div>
                 )}
-                <button type="submit" onClick={submit} className={styles.submitButton}>Сохранить изменения</button>
+                <button type="submit" onClick={submit} className={styles.submitButton} disabled={validity}>Сохранить изменения</button>
             </div>)
             : null)
 

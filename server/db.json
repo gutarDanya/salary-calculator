@@ -121,6 +121,19 @@
       "worked": false,
       "status": "бариста",
       "tel": ""
+    },
+    {
+      "name": "Илья",
+      "age": "18",
+      "avatar": "https://www.google.com/imgres?q=%D0%BF%D1%83%D1%81%D1%82%D0%B0%D1%8F%20%D0%B0%D0%B2%D0%B0%D1%82%D0%B0%D1%80%D0%BA%D0%B0%20%D0%B2%D0%BA&imgurl=https%3A%2F%2Fflomaster.top%2Fuploads%2Fposts%2F2023-01%2Fthumbs%2F1673563911_flomaster-club-p-profil-risunok-vkontakte-74.png&imgrefurl=https%3A%2F%2Fflomaster.top%2F81109-profil-risunok.html&docid=oGrriwBgvY33DM&tbnid=G62udu2TO99ilM&vet=12ahUKEwj82f2Fj-KGAxWgKRAIHXamDqwQM3oECEsQAA..i&w=750&h=750&hcb=2&ved=2ahUKEwj82f2Fj-KGAxWgKRAIHXamDqwQM3oECEsQAA",
+      "login": "danya@gmail.com",
+      "salary": "120",
+      "tel": "88005553535",
+      "password": "12431243",
+      "id": "00d504dc-1f91-4a4b-9288-ebc9d3599f58",
+      "hours": [],
+      "worked": false,
+      "status": "бариста"
     }
   ],
   "desserts": [

@@ -53,9 +53,30 @@ export const getDesserts = createAsyncThunk(
     }
 )
 
-// export const testApi = createApi({
-//     baseQuery: fetchBaseQuery
-// })
+export const sendNewDessert = createAsyncThunk(
+    'dessert/postDessert',
+    async function (dessert: Tdesserts, {rejectWithValue, dispatch}) {
+
+        try {
+            const response = await fetch(`${baseTestUrl}/desserts/${dessert.id}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...dessert
+                })
+            })
+            .then(res => res.json())
+            .then((res) => {
+                dispatch(addDessert(res))
+            })
+        } catch (error: any) {
+            return rejectWithValue(error.message)
+        }
+        
+    }
+)
 
 export const testSlice = createSlice({
     name: 'test',
@@ -88,6 +109,10 @@ export const testSlice = createSlice({
 
             state.filterderDesserts = currentArr
         },
+        addDessert (state, action: PayloadAction<Tdesserts>) {
+            const newDessert = action.payload;
+            state.desserts = [...state.desserts, newDessert]
+        },
         findDessert(state, action: PayloadAction<string>) {
             action.payload == ''
             ? state.findedDessert = state.filterderDesserts
@@ -110,5 +135,5 @@ export const testSlice = createSlice({
     },
 })
 
-export const { click, getCurrentDessert, getFilteredDesserts, findDessert } = testSlice.actions;
+export const { click, getCurrentDessert, getFilteredDesserts, findDessert, addDessert } = testSlice.actions;
 export default testSlice.reducer

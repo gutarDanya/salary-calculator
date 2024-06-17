@@ -28,10 +28,11 @@ export const MainPage: React.FC<Props> = ({title}) => {
         pageActive = true
     }, [])
 
-    // const totalSxpenses = employees.reduce((acc: number, item: Temployee) => {
-
-        
-    // }, 0)
+    const totalSxpenses = employees.reduce((acc: number, item: Temployee) => {
+        return acc + item.hours.reduce((acc, item2) => {
+            return acc + item2.revenue * currentKPI
+        },  0)
+    }, 0)
 
     
     return(
@@ -48,7 +49,7 @@ export const MainPage: React.FC<Props> = ({title}) => {
                 })}
             </div>
             <button type="button" className={styles.addEmploye} onClick={addEmploye}>Добавить сотрудника</button>
-            <p className={styles.totalExpenses}>суммарные расходы: ₽</p>
+            <p className={styles.totalExpenses}>суммарные расходы: {Math.floor(totalSxpenses)}₽</p>
         </div>
     )
 }

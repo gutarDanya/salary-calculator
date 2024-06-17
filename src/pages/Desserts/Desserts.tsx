@@ -3,10 +3,11 @@ import styles from './Desserts.module.css';
 import { useAppDispatch, useAppSelector } from "../../services/store";
 import { findDessert, getDesserts, getFilteredDesserts } from "../../services/slices/TestSlice";
 import Dessert from "./Dessert/Dessert";
-import { Tdesserts } from "../../utils/Types";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Desserts = () => {
-
+    const navigate = useNavigate();
+    const location = useLocation();
     const [filters, setFilters] = useState({fewCalories: false, vegan: false, withoutFlour: false, withoutGluten: false, withoutEggs: false, withoutMilk: false,});
     const [nameOfDessert, setNameOfDessert] = useState('')
 
@@ -28,8 +29,12 @@ const Desserts = () => {
     const submitForm = (evt: any) => {
         evt.preventDefault()
         dispatch(getFilteredDesserts(filters))
-        console.log(desserts)
     }
+
+    function sendDessert (evt: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        evt.preventDefault();
+        navigate('add-dessert', {state: {background: location}})
+    } 
 
     return (
         <div className={styles.page}>
@@ -41,6 +46,7 @@ const Desserts = () => {
                             <Dessert dessert={dessert!} />
                         )
                     })}
+                    <button type="button" className={styles.addDessertButton} onClick={sendDessert}>Добавить Дессерт</button>
                 </div>
                 <form className={styles.findContainer}>
                     <input className={`input ${styles.input}`} type='text' placeholder="дессерт" value={nameOfDessert} onChange={e => setNameOfDessert(e.target.value)}/>
