@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 export const useValidation = (value: any, validations: any) => {
     const [isEmpty, setIsEmpty] = useState(true);
     const [minLenthError, setminLenthError] = useState(false);
-    const [isNumberError, setIsNumberError] = useState(false);
+    const [isNumber, setIsNumber] = useState(false);
     const [inputValid, setInputValid] = useState(false);
     const [errorText, setErrorText] = useState("")
     useEffect(() => {
@@ -14,9 +14,14 @@ export const useValidation = (value: any, validations: any) => {
                     setErrorText("поле не должно быть пустым")
                 break;
                 case "isNumber": 
-                    const re = /^\d+$/
-                    re.test(value) ? setIsNumberError(false) : setIsNumberError(true);
-                    setErrorText("введите число")
+                    const re = new RegExp("^[-+]?[0-9]*[.,]?[0-9]+(?:[eE][-+]?[0-9]+)?$")
+                    if (re.test(value) || typeof value === "number") {
+                        setIsNumber(false)
+                        setErrorText('')
+                    } else {
+                        setIsNumber(true)
+                        setErrorText('Введите число')
+                    }
                 break;
                 case "minLenth":
                     value.length < validations[validation] ? setminLenthError(true) : setminLenthError(false);
@@ -30,17 +35,18 @@ export const useValidation = (value: any, validations: any) => {
     }, [value])
 
     useEffect(() => {
-        if (isEmpty || minLenthError || isNumberError ) {
+        if (isEmpty || minLenthError || isNumber ) {
             setInputValid(false)
         } else {
             setInputValid(true)
+            setErrorText("")
         }
-    }, [isEmpty, minLenthError, isNumberError])
+    }, [isEmpty, minLenthError, setIsNumber])
 
     return {
         isEmpty,
         minLenthError,
-        isNumberError,
+        setIsNumber,
         inputValid,
         errorText
     }

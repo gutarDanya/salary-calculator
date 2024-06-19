@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+}
+
+.container:last-of-type {
+    margin-bottom: 20px;
+}
+
+.input {
+    margin: 10px auto 0 10px;
+    border: 0;
+    background-color: transparent;
+}
+
+.deleteButton {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border: 0;
+    background-color: transparent;
+}
+
+.image {
+    width: 100%;
+}

@@ -19,6 +19,7 @@ import EmployeePopup from '../../pages/EmployeePopup/EmployeePopup';
 import { getEmployees } from '../../services/slices/EmployeeSlice';
 import EmployeePage from '../../pages/EmployeePage/EmployeePage';
 import AddDessertPopup from '../../pages/addDessertPopup/AddDessertPopup';
+import PatchDessertPopup from '../../pages/PatchDessertPage/PatchDessertPage';
 
 
 function App() {
@@ -70,6 +71,12 @@ function App() {
             <Route path='/desserts/add-dessert' element={
               <Modal title='добавить дессерт' handleClose={closePopup}>
                 <AddDessertPopup />
+              </Modal>
+            } />
+
+            <Route path='/desserts/:id/patch-dessert' element={
+              <Modal title='изменить дессерт' handleClose={closePopup}>
+                <PatchDessertPopup />
               </Modal>
             } />
 

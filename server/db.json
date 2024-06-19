@@ -138,33 +138,31 @@
   ],
   "desserts": [
     {
-      "name": "Сникерс",
+      "name": "сникерс",
       "url": "https://downloader.disk.yandex.ru/preview/6618648be681952997ac264eb60d41c1b285a0728676f526141fbac065725196/661c10e9/eL96Q7A3EG5oz-B9Pazv9x7U3GXydFo0qtjNKGiNO_1ELMq7Q3vSEDkPixLGMy2XCrYcNZPi_p68RIkModQJLQ%3D%3D?uid=0&filename=IMG_8659.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1898x927",
+      "info": {
+        "kkal": 508,
+        "p": 9,
+        "f": 39,
+        "c": 30
+      },
       "hasStevia": false,
+      "withoutFlour": true,
       "hasTopinambura": true,
       "fewCalories": false,
       "vegan": true,
-      "withoutFlour": true,
-      "withoutGluten": true,
       "withoutEggs": true,
-      "withoutMilk": true,
-      "id": "1",
       "ingredients": [
         "Кокосовое молоко",
-        "какао",
-        "какао масло",
         "сироп топинамбура",
         "кокосовое масло",
         "финики",
         "кешью",
         "Арахис"
       ],
-      "info": {
-        "kkal": 508,
-        "p": 9.4,
-        "f": 39,
-        "c": 30.6
-      }
+      "withoutGluten": true,
+      "withoutMilk": true,
+      "id": "1"
     },
     {
       "name": "Твикс",
@@ -197,16 +195,19 @@
     },
     {
       "name": "Овсянное печенье",
-      "url": "",
+      "url": "https://e0.edimdoma.ru/data/posts/0002/2712/22712-ed4_wide.jpg?1631189293",
+      "info": {
+        "kkal": 122,
+        "p": 7.1,
+        "f": 14.4,
+        "c": 19
+      },
       "hasStevia": false,
+      "withoutFlour": false,
       "hasTopinambura": false,
       "fewCalories": true,
       "vegan": true,
-      "withoutFlour": false,
-      "withoutGluten": false,
       "withoutEggs": false,
-      "withoutMilk": false,
-      "id": "3",
       "ingredients": [
         "кокосовое масло",
         "Кокосовый сахар",
@@ -219,14 +220,12 @@
         "мускатный орех",
         "какао масло",
         "какао",
-        "Минадальные лепестки"
+        "Минадальные лепестки",
+        "что то новое"
       ],
-      "info": {
-        "kkal": 122,
-        "p": 7.1,
-        "f": 14.4,
-        "c": 19
-      }
+      "withoutGluten": false,
+      "withoutMilk": false,
+      "id": "3"
     },
     {
       "name": "Кейкпопс",
@@ -312,33 +311,32 @@
       }
     },
     {
-      "name": "карамельная конфета",
+      "name": "конфета с арахисовой пастой",
       "url": "https://sun9-22.userapi.com/impg/_c0jk0mrq8a1c2XJGYTEfYe6CL3Y_PjhVo7ooQ/PiWcfBSu1Q8.jpg?size=1620x2160&quality=95&sign=51bdcc0add760b5db44ca2464a97d4db&type=album",
-      "hasStevia": false,
-      "hasTopinambura": true,
-      "fewCalories": true,
-      "vegan": true,
-      "withoutFlour": true,
-      "withoutGluten": false,
-      "withoutEggs": true,
-      "withoutMilk": true,
-      "id": "7",
-      "ingredients": [
-        "финики",
-        "арахисовая паста",
-        "миндаль",
-        "фундук",
-        "кешью",
-        "какао масло",
-        "какао",
-        "сироп топинамбура"
-      ],
       "info": {
         "kkal": 181.3,
         "p": 3.6,
         "f": 13.4,
         "c": 12
-      }
+      },
+      "hasStevia": true,
+      "withoutFlour": true,
+      "hasTopinambura": true,
+      "fewCalories": true,
+      "vegan": true,
+      "withoutEggs": true,
+      "ingredients": [
+        "арахисовая паста",
+        "миндаль",
+        "фундук",
+        "кешью",
+        "какао масло",
+        "сироп топинамбура",
+        "коньяк"
+      ],
+      "withoutGluten": false,
+      "withoutMilk": true,
+      "id": "7"
     },
     {
       "name": "баунти конфета",

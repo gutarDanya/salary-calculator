@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.secondColumn {
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;
+    min-width: 200px;
+    border-radius: 10px;
+    height: calc(100% - 80px);
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+.checkboxes {
+    margin-top: 15px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.patchButton {
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 21px;
+    border: 0;
+    background-color: #fddc36;
+}
+
+.deleteButton {
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 21px;
+    border: 0;
+    background-color: rgb(244, 59, 59);
+}
+
+.input {
+    width: 100%;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.addButton {
+    width: 100%;
+    font-size: 21px;
+}
+
+.inputContainer {
+    text-align: center;
+    gap: 5px;
+    width: 80%;
+    margin: auto auto 20px auto;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

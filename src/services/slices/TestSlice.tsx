@@ -31,7 +31,7 @@ const initialState: TinitialState = {
         "withoutGluten": false,
         "withoutEggs": false,
         "withoutMilk": false,
-        "id": 57,
+        "id": "57",
         "ingredients": ['cum'],
         "info": {
             "kkal": 209,
@@ -53,12 +53,49 @@ export const getDesserts = createAsyncThunk(
     }
 )
 
+export const deleteDessert = createAsyncThunk(
+    'test/deleteIngredient',
+    async function (dessert: Tdesserts, {rejectWithValue, dispatch}) {
+        try {
+            const response = await fetch(`${baseTestUrl}/desserts/${dessert.id}`, {
+                method: "DELETE" 
+            })
+            .then(res => res.json())
+            .then(() => {dispatch(removeDessert(dessert))})
+            .catch(err => console.log(err))
+            return response
+        } catch  (err: any) {
+            return rejectWithValue(err.message)
+        }
+    }
+)
+
+export const patchDessert = createAsyncThunk(
+    'test/upadateDessert',
+    async function (dessert: Tdesserts, {rejectWithValue, dispatch}) {
+        try {
+            const response = await fetch(`${baseTestUrl}/desserts/${dessert.id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({...dessert})
+            })
+            .then(() => {dispatch(updateDessert(dessert))})
+            .catch(err => console.log(err))
+            return response
+        } catch (err: any) {
+            return rejectWithValue(err.message)
+        }
+    }
+)
+
 export const sendNewDessert = createAsyncThunk(
     'dessert/postDessert',
     async function (dessert: Tdesserts, {rejectWithValue, dispatch}) {
 
         try {
-            const response = await fetch(`${baseTestUrl}/desserts/${dessert.id}`, {
+            const response = await fetch(`${baseTestUrl}/desserts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -69,8 +106,13 @@ export const sendNewDessert = createAsyncThunk(
             })
             .then(res => res.json())
             .then((res) => {
-                dispatch(addDessert(res))
+                dispatch(addDessert(dessert))
             })
+            .catch((err) => {
+                console.log(`Не получилось отправить дессерт, ошибка: ${err}`)
+            })
+
+            return response
         } catch (error: any) {
             return rejectWithValue(error.message)
         }
@@ -85,7 +127,7 @@ export const testSlice = createSlice({
         click(state, action: PayloadAction<string>) {
             state.unAsyncData = action.payload
         },
-        getCurrentDessert(state, action: PayloadAction<number>) {
+        getCurrentDessert(state, action: PayloadAction<string>) {
             state.currentDessert = state.desserts.find((dessert) => { return dessert!.id == action.payload }) || state.currentDessert
         },
         getFilteredDesserts(state, action: PayloadAction<TdessertsFilter>) {
@@ -109,14 +151,39 @@ export const testSlice = createSlice({
 
             state.filterderDesserts = currentArr
         },
+        updateDessert (state, action: PayloadAction<Tdesserts>) {
+            const newDessert = action.payload
+            state.desserts = state.desserts.map((dessert) => {return dessert.id === newDessert.id
+                ? newDessert
+                : dessert
+            });
+            state.currentDessert = newDessert;
+            state.filterderDesserts = state.filterderDesserts.map((dessert) => {return dessert.id === newDessert.id
+                ? newDessert
+                : dessert
+            })
+        },
+        addIngredient (state, action: PayloadAction<string>) {
+            state.currentDessert = {...state.currentDessert, ingredients: [...state.currentDessert.ingredients, action.payload]}
+        },
         addDessert (state, action: PayloadAction<Tdesserts>) {
             const newDessert = action.payload;
-            state.desserts = [...state.desserts, newDessert]
+            state.desserts = [...state.desserts, newDessert];
+            state.filterderDesserts = [...state.filterderDesserts, newDessert]
         },
         findDessert(state, action: PayloadAction<string>) {
             action.payload == ''
             ? state.findedDessert = state.filterderDesserts
             : state.findedDessert = state.filterderDesserts.filter((dessert) => {return dessert.name.toLowerCase().includes(action.payload.toLowerCase())})
+        },
+        removeDessert (state, action: PayloadAction<Tdesserts>) {
+            state.desserts = state.desserts.filter((dessert) => {return dessert.id !== action.payload.id})
+            state.filterderDesserts = state.filterderDesserts.filter((dessert) => {return dessert.id !== action.payload.id})
+        },
+        deleteIngredient(state, action: PayloadAction<string>) {
+            state.currentDessert = {...state.currentDessert, ingredients: state.currentDessert.ingredients.filter((ingredient) => {
+                return ingredient === action.payload ? false : true
+            })}
         }
     },
     extraReducers: (builder) => {
@@ -135,5 +202,5 @@ export const testSlice = createSlice({
     },
 })
 
-export const { click, getCurrentDessert, getFilteredDesserts, findDessert, addDessert } = testSlice.actions;
+export const { click, getCurrentDessert, getFilteredDesserts, findDessert, addDessert, deleteIngredient, removeDessert, updateDessert, addIngredient } = testSlice.actions;
 export default testSlice.reducer

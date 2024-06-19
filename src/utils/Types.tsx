@@ -23,7 +23,7 @@ export type Tdesserts = {
     withoutGluten: boolean,
     withoutEggs: boolean,
     withoutMilk: boolean,
-    id: number,
+    id: string,
     ingredients: Array<string>,
     info: {
         "kkal": number,
