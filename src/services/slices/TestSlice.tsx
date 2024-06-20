@@ -131,7 +131,7 @@ export const testSlice = createSlice({
             state.currentDessert = state.desserts.find((dessert) => { return dessert!.id == action.payload }) || state.currentDessert
         },
         getFilteredDesserts(state, action: PayloadAction<TdessertsFilter>) {
-            const { withoutGluten, withoutEggs, withoutFlour, withoutMilk, fewCalories, vegan, hasStevia, hasTopinambura } = action.payload
+            const { withoutGluten, withoutEggs, withoutFlour, withoutMilk, fewCalories, vegan, withoutStevia, withoutTopinambura, searchQuery } = action.payload
 
             let currentArr = state.desserts;
 
@@ -147,6 +147,11 @@ export const testSlice = createSlice({
 
             vegan ? currentArr = currentArr.filter((dessert) => {return dessert.vegan === true}) : console.log('вне ыполнен веган');
 
+            withoutStevia ? currentArr = currentArr.filter((dessert) => {return dessert.hasStevia === false}) : console.log("не выполнена стевия");
+
+            withoutTopinambura ? currentArr = currentArr.filter((dessert) => {return dessert.hasTopinambura === false}) : console.log("не выполнена топинамбура");
+
+            searchQuery !== "" ? currentArr = currentArr.filter((dessert) => {return dessert.name.toLowerCase().includes(searchQuery.toLowerCase())}) : console.log("не найдено")
 
 
             state.filterderDesserts = currentArr

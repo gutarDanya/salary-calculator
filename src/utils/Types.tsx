@@ -40,8 +40,9 @@ export type TdessertsFilter = {
     withoutEggs?: boolean,
     withoutMilk?: boolean,
     fewCalories?: boolean,
-    hasTopinambura?: boolean,
-    hasStevia?: boolean
+    withoutTopinambura?: boolean,
+    withoutStevia?: boolean,
+    searchQuery: string
 }
 export type TnewEmployee = {
     name: string;

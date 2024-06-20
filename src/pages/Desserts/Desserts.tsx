@@ -4,12 +4,26 @@ import { useAppDispatch, useAppSelector } from "../../services/store";
 import { findDessert, getDesserts, getFilteredDesserts } from "../../services/slices/TestSlice";
 import Dessert from "./Dessert/Dessert";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useInput } from "../../utils/hooks";
+import BaseInput from "../../components/BaseInput/BaseInput";
+import CheckboxInput from "../../components/CheckboxInput/CheckboxInput";
 
 const Desserts = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const [filters, setFilters] = useState({fewCalories: false, vegan: false, withoutFlour: false, withoutGluten: false, withoutEggs: false, withoutMilk: false,});
-    const [nameOfDessert, setNameOfDessert] = useState('')
+    const nameOfDessert = useInput("", {isEmpty: false})
+
+    console.log(nameOfDessert.value)
+
+    const withoutGluten = useInput(false, {isEmpty:false});
+    const fewCalories = useInput(false, {isEmpty: false});
+    const vegan = useInput(false, {isEmpty: false})
+    const withoutFlour = useInput(false, {isEmpty: false})
+    const withoutEggs = useInput(false, {isEmpty: false})
+    const withoutMilk = useInput(false, {isEmpty: false})
+    const withoutTopinambura = useInput(false, {isEmpty: false})
+    const withoutStevia = useInput(false, {isEmpty: false})
+
 
     const dispatch = useAppDispatch()
 
@@ -17,18 +31,23 @@ const Desserts = () => {
         dispatch(getDesserts())
     }, []);
 
-    useEffect(() => {
-        if (nameOfDessert != '')
-        dispatch(findDessert(nameOfDessert));
-    }, [nameOfDessert])
-
     const shirmStatus = useAppSelector(state => state.AppSlice.shirmStatus)
     const desserts = useAppSelector(state => state.TestSlice.filterderDesserts);
     
 
     const submitForm = (evt: any) => {
         evt.preventDefault()
-        dispatch(getFilteredDesserts(filters))
+        dispatch(getFilteredDesserts({
+            withoutEggs: withoutEggs.value,
+            withoutFlour: withoutFlour.value,
+            withoutGluten: withoutGluten.value,
+            withoutMilk: withoutMilk.value,
+            vegan: vegan.value,
+            fewCalories: fewCalories.value,
+            withoutStevia: withoutStevia.value,
+            withoutTopinambura: withoutTopinambura.value,
+            searchQuery: nameOfDessert.value
+        }))
     }
 
     function sendDessert (evt: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
@@ -49,39 +68,15 @@ const Desserts = () => {
                     <button type="button" className={styles.addDessertButton} onClick={sendDessert}>Добавить Дессерт</button>
                 </div>
                 <form className={styles.findContainer}>
-                    <input className={`input ${styles.input}`} type='text' placeholder="дессерт" value={nameOfDessert} onChange={e => setNameOfDessert(e.target.value)}/>
-                    <label className={styles.checkboxContainer}>
-                        <input type='checkbox' onClick={() => setFilters({...filters, withoutGluten: !filters.withoutGluten})}/>
-                        <p className={styles.checkboxText}>без глютена</p>
-                    </label>
-                    <label className={styles.checkboxContainer}>
-                        <input type='checkbox' onClick={() => setFilters({...filters, fewCalories: !filters.fewCalories})}/>
-                        <p className={styles.checkboxText} >низкоколорийные</p>
-                    </label>
-                    <label className={styles.checkboxContainer}>
-                        <input type="checkbox" onClick={() => setFilters({...filters, vegan: !filters.vegan})}/>
-                        <p className={styles.checkboxText} >Вегнские</p>
-                    </label>
-                    <label className={styles.checkboxContainer}>
-                        <input type="checkbox" onClick={() => setFilters({...filters, withoutFlour: !filters.withoutFlour})}/>
-                        <p className={styles.checkboxText} >без муки</p>
-                    </label>
-                    <label className={styles.checkboxContainer}>
-                        <input type="checkbox" onClick={() => setFilters({...filters, withoutEggs: !filters.withoutEggs})}/>
-                        <p className={styles.checkboxText} >без яиц</p>
-                    </label>
-                    <label className={styles.checkboxContainer}>
-                        <input type="checkbox" onClick={() => setFilters({...filters, withoutMilk: !filters.withoutMilk})}/>
-                        <p className={styles.checkboxText} >без молока</p>
-                    </label>
-                    <label className={styles.checkboxContainer}>
-                        <input type="checkbox" checked={true}/>
-                        <p className={styles.checkboxText} >топинамбура</p>
-                    </label>
-                    <label className={styles.checkboxContainer}>
-                        <input type="checkbox" checked={true}/>
-                        <p className={styles.checkboxText} >стевия</p>
-                    </label>
+                    <BaseInput input={nameOfDessert} type="text" placeholder="дессерт"  name="search" />
+                    <CheckboxInput input={withoutGluten} text="без глютена" />
+                    <CheckboxInput input={fewCalories} text="низкоколорийные" />
+                    <CheckboxInput input={vegan} text="веганские" />
+                    <CheckboxInput input={withoutFlour} text="без муки" />
+                    <CheckboxInput input={withoutEggs} text="без яиц" />
+                    <CheckboxInput input={withoutMilk} text="без молока" />
+                    <CheckboxInput input={withoutStevia} text="без стевии" />
+                    <CheckboxInput input={withoutTopinambura} text="без топинамбуры" />
                     <button type='submit' className={styles.submitSerch} onClick={submitForm}>Применить</button>
                 </form>
             </div>
