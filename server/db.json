@@ -209,7 +209,6 @@
       "vegan": true,
       "withoutEggs": false,
       "ingredients": [
-        "кокосовое масло",
         "Кокосовый сахар",
         "овсянное молоко",
         "овсяные хлопья",
@@ -218,10 +217,8 @@
         "Соль",
         "корица",
         "мускатный орех",
-        "какао масло",
         "какао",
-        "Минадальные лепестки",
-        "что то новое"
+        "Минадальные лепестки"
       ],
       "withoutGluten": false,
       "withoutMilk": false,
@@ -229,16 +226,19 @@
     },
     {
       "name": "Кейкпопс",
-      "url": "https://downloader.disk.yandex.ru/preview/df12ffe521511d19a0cf7fd1d60212ae5762e77ee330d568c6da49b40059ceff/661c10ea/Mx8YVoQyNioBxXHZhGK7WbBBMtczJ5mpb77VNT2o_5CN9NhklSRtoWG0ZX8pTOMth3Ls_IxxCB3THO8lovwfGw%3D%3D?uid=0&filename=IMG_8686.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1898x927",
+      "url": "https://www.picnic-catering.ru/wp-content/uploads/2020/06/img_6930.jpg",
+      "info": {
+        "kkal": 161,
+        "p": 3.9,
+        "f": 10.8,
+        "c": 12.1
+      },
       "hasStevia": true,
+      "withoutFlour": false,
       "hasTopinambura": true,
       "fewCalories": true,
       "vegan": false,
-      "withoutFlour": false,
-      "withoutGluten": false,
       "withoutEggs": true,
-      "withoutMilk": false,
-      "id": "4",
       "ingredients": [
         "бисквит шоколадный",
         "творожный сыр",
@@ -248,25 +248,25 @@
         "молочный шоколад на стевии",
         "какао масло"
       ],
-      "info": {
-        "kkal": 161,
-        "p": 3.9,
-        "f": 10.8,
-        "c": 12.1
-      }
+      "withoutGluten": false,
+      "withoutMilk": false,
+      "id": "4"
     },
     {
       "name": "Клубничный кейк-попс",
-      "url": "https://downloader.disk.yandex.ru/preview/3fcc2869ea22c983138f32dea9718fdea98b49995d9d0c660a7a0d5db77c58ce/661c10ea/3TIguwZs4GDQel40GK14mVCiSQa45Vmt1eMrgmFQOGBCYQjIXOrGEv_iu4lZErKuFyUosnl1nrRKT_o28qjD7A%3D%3D?uid=0&filename=IMG_8682.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1898x927",
+      "url": "https://e2.edimdoma.ru/data/posts/0002/4262/24262-ed4_wide.jpg?1636641797",
+      "info": {
+        "kkal": 170,
+        "p": 3.8,
+        "f": 11.1,
+        "c": 13.3
+      },
       "hasStevia": true,
+      "withoutFlour": false,
       "hasTopinambura": true,
       "fewCalories": true,
       "vegan": false,
-      "withoutFlour": false,
-      "withoutGluten": false,
       "withoutEggs": true,
-      "withoutMilk": false,
-      "id": "5",
       "ingredients": [
         "бисквит сливочный",
         "творожный сыр",
@@ -277,12 +277,9 @@
         "молочный шоколад на стевии",
         "какао масло"
       ],
-      "info": {
-        "kkal": 170,
-        "p": 3.8,
-        "f": 11.1,
-        "c": 13.3
-      }
+      "withoutGluten": false,
+      "withoutMilk": false,
+      "id": "5"
     },
     {
       "name": "печенье с арахисовой пастой",
@@ -542,16 +539,19 @@
     },
     {
       "name": "наполеон кусок",
-      "url": "",
+      "url": "https://img1.russianfood.com/dycontent/images_upl/248/big_247210.jpg",
+      "info": {
+        "kkal": 280,
+        "p": 7.8,
+        "f": 14.9,
+        "c": 21.5
+      },
       "hasStevia": true,
+      "withoutFlour": false,
       "hasTopinambura": true,
       "fewCalories": false,
       "vegan": false,
-      "withoutFlour": false,
-      "withoutGluten": false,
       "withoutEggs": false,
-      "withoutMilk": false,
-      "id": "15",
       "ingredients": [
         "Мучная смесь без глютена",
         "Рисовая мука",
@@ -566,12 +566,9 @@
         "сироп топинамбура",
         "йогурт"
       ],
-      "info": {
-        "kkal": 280,
-        "p": 7.8,
-        "f": 14.9,
-        "c": 21.5
-      }
+      "withoutGluten": false,
+      "withoutMilk": false,
+      "id": "15"
     },
     {
       "name": "чизкейк черника кусок",
@@ -1705,16 +1702,19 @@
     },
     {
       "name": "маффин сникерс",
-      "url": "https://downloader.disk.yandex.ru/preview/2411e77612e8ddb9efb3bb97b8a19fd265017dd6f6bcae80ae6080b538b70c55/661c1085/UJFQU4rpF-_XWTYVT7Y6QIbtT1E4bpZq5fWXRA11rqYoX8Cd9ISNYZzm3VY14iuc3ZKoe4s0SMNXGXyUJlulSw%3D%3D?uid=0&filename=DSC_9628.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1898x927",
+      "url": "https://gfc-russia.ru/storage/sync/catalog/product/23d/23db9a88859cf473bcb41610b44d9b49aa639234-600.webp",
+      "info": {
+        "kkal": 280,
+        "p": 6,
+        "f": 19,
+        "c": 18
+      },
       "hasStevia": true,
+      "withoutFlour": false,
       "hasTopinambura": false,
       "fewCalories": false,
       "vegan": false,
-      "withoutFlour": false,
-      "withoutGluten": false,
       "withoutEggs": false,
-      "withoutMilk": false,
-      "id": "51",
       "ingredients": [
         "яйцо",
         "Стевия",
@@ -1729,12 +1729,9 @@
         "Топинамбур",
         "Арахис"
       ],
-      "info": {
-        "kkal": 280,
-        "p": 6,
-        "f": 19,
-        "c": 18
-      }
+      "withoutGluten": false,
+      "withoutMilk": false,
+      "id": "51"
     },
     {
       "name": "конфета с арахисовой пастой",

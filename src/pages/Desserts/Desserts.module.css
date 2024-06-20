@@ -17,21 +17,11 @@
 }
 
 .findContainer {
-    right: 100px;
     display: flex;
     flex-direction: column;
     width: 200px;
     height: 500px;
     margin-right: 0;
-}
-
-.checkboxContainer {
-    display: flex;
-    margin-top: 10px;
-}
-
-.checkboxContainer:first-of-type {
-    margin-top: 20px;
 }
 
 .checkboxText {

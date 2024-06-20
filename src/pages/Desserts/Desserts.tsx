@@ -13,8 +13,6 @@ const Desserts = () => {
     const location = useLocation();
     const nameOfDessert = useInput("", {isEmpty: false})
 
-    console.log(nameOfDessert.value)
-
     const withoutGluten = useInput(false, {isEmpty:false});
     const fewCalories = useInput(false, {isEmpty: false});
     const vegan = useInput(false, {isEmpty: false})
