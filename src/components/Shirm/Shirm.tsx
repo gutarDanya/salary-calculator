@@ -27,6 +27,7 @@ const Shirm = () => {
                     <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} to={'/'}>Сотрудники</NavLink>
                     <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} to={'/statistics'}>План</NavLink>
                     <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} to={'/desserts'}>Дессерты</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.inactiveLink} to={'/coffe-shops'}>Кофейни</NavLink>
                 </nav>
                 <div className={styles.settingsContainer}>
                     <button className={styles.settingsButton} type='button'>

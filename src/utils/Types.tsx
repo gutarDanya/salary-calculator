@@ -69,3 +69,11 @@ export type Tplan = {
 export type TtotalPerHours = {
     total: number;
 }
+
+export type TCoffeShop = {
+    name: string,
+    adesss: string,
+    plan: number,
+    complitedPlan: number,
+    id: string
+}

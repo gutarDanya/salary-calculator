@@ -20,6 +20,8 @@ import { getEmployees } from '../../services/slices/EmployeeSlice';
 import EmployeePage from '../../pages/EmployeePage/EmployeePage';
 import AddDessertPopup from '../../pages/addDessertPopup/AddDessertPopup';
 import PatchDessertPopup from '../../pages/PatchDessertPage/PatchDessertPage';
+import CoffeShopsPage from '../../pages/CoffeShopsPage/CoffeShopsPage';
+import { getCoffeShops } from '../../services/slices/CoffeShopsSlice';
 
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
   useEffect(() => {
     dispatch(getEmployees())
     dispatch(checkUserAuth())
+    dispatch(getCoffeShops())
   },[])
 
   const backgroundLocation = location.state?.background;
@@ -51,6 +54,7 @@ function App() {
             <Route path='/' element={<MainPage title='сотрудники' />} />
             <Route path='/statistics' element={<StatisticsPage />} />
             <Route path='/settings' element={<SettingsPage />} />
+            <Route path='/coffe-shops' element={<CoffeShopsPage />} />
             <Route path='/desserts' element={<Desserts />} />
             <Route path='/change-employee/:id' element={<EmployeePage />}/>
           </Routes>
@@ -83,6 +87,12 @@ function App() {
             <Route path='/:id' element={
               <Modal title='Сотрудник' handleClose={closePopup}>
                 <EmployeePopup />
+              </Modal>
+            } />
+
+            <Route path='/coffe-shops/add-coffe-shop' element={
+              <Modal title='добавить коффейню' handleClose={closePopup}>
+                
               </Modal>
             } />
           </Routes>

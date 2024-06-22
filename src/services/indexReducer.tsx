@@ -4,12 +4,14 @@ import StatisticReducer from "./reducers/StatisticsReducer";
 import AppSlice from "./slices/AppSlice";
 import TestSlice from "./slices/TestSlice";
 import EmployeeSlice from "./slices/EmployeeSlice";
+import CoffeShopsSlice from "./slices/CoffeShopsSlice";
 
 export const rootReducer = combineReducers({
     StatisticReducer,
     TestSlice,
     EmployeeSlice,
-    AppSlice
+    AppSlice,
+    CoffeShopsSlice
 })
 
 export const setupStore = () => {

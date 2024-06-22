@@ -1,0 +1,10 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    transition: all 250ms linear;
+}
+
+.coffeShops {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+}
