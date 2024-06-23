@@ -72,7 +72,7 @@ export type TtotalPerHours = {
 
 export type TCoffeShop = {
     name: string,
-    adesss: string,
+    adess: string,
     plan: number,
     complitedPlan: number,
     id: string

@@ -22,6 +22,7 @@ import AddDessertPopup from '../../pages/addDessertPopup/AddDessertPopup';
 import PatchDessertPopup from '../../pages/PatchDessertPage/PatchDessertPage';
 import CoffeShopsPage from '../../pages/CoffeShopsPage/CoffeShopsPage';
 import { getCoffeShops } from '../../services/slices/CoffeShopsSlice';
+import AddCoffeShopPopup from '../../pages/AddCoffeShopPopup/AddCoffeShopPopup';
 
 
 function App() {
@@ -92,7 +93,7 @@ function App() {
 
             <Route path='/coffe-shops/add-coffe-shop' element={
               <Modal title='добавить коффейню' handleClose={closePopup}>
-                
+                <AddCoffeShopPopup />
               </Modal>
             } />
           </Routes>
