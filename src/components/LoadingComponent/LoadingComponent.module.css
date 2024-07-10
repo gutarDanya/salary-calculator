@@ -1,0 +1,12 @@
+.container {
+  margin: 30% auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif {
+    width: 40px;
+    height: 40px;
+}

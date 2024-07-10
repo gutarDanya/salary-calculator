@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './AddCoffeShopPopup.module.css';
 import { useInput } from "../../utils/hooks";
-import { useAppDispatch } from "../../services/store";
+import { useAppDispatch, useAppSelector } from "../../services/store";
 import { v4 as uuid } from "uuid";
 import { sendNewCoffeShop } from "../../services/slices/CoffeShopsSlice";
 import BaseInput from "../../components/BaseInput/BaseInput";
@@ -13,15 +13,16 @@ const AddCoffeShopPopup = () => {
     const plan = useInput("", {isEmpty: false, isNumber: true });
     const adress = useInput("", {isEmpty: true});
 
-    const validity = checkValidity(name, plan, adress)
+    const validity = checkValidity(name, plan, adress);
 
     function addCoffeShop () {
         dispatch(sendNewCoffeShop({
             name: name.value,
-            plan: plan.value,
+            plan: Number(plan.value),
             adess: adress.value,
             id: uuid(),
-            complitedPlan: 0
+            complitedPlan: 0,
+            provisions: []
         }))
     }
     

@@ -70,10 +70,23 @@ export type TtotalPerHours = {
     total: number;
 }
 
+export type Tprovision = {
+    name: string;
+    count: number;
+    minCount: number;
+}
+
+export type TsendedPosition =  {
+    position: Tprovision,
+    otherPositions: Array<Tprovision>
+    id: string
+}
+
 export type TCoffeShop = {
     name: string,
     adess: string,
     plan: number,
     complitedPlan: number,
-    id: string
+    id: string,
+    provisions: Array<Tprovision>
 }

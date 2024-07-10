@@ -1,0 +1,33 @@
+.page {
+  min-height: 100%;
+  transition: all 250ms linear;
+}
+
+.main {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.positions {
+  background-color: gainsboro;
+  width: 350px;
+  min-height: 500px;
+  max-height: 800px;
+  overflow-y: scroll;
+}
+
+.gif {
+  width: 30px;
+  height: 30px;
+  margin: 40vh auto auto;
+}
+
+.addPosition {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}

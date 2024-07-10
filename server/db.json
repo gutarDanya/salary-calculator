@@ -1956,11 +1956,28 @@
   ],
   "coffeShops": [
     {
-      "id": "c280d4fc-1fd8-4995-8c34-76268435cf15",
-      "name": "что то ",
-      "plan": "40000",
-      "adess": "1флдыравлфдыо",
-      "complitedPlan": 0
+      "id": "6222eac8-69c4-4396-98c6-1708a3bf8bb0",
+      "name": "флшкптылда",
+      "plan": "10941092",
+      "adess": "ждпывалрждэва",
+      "complitedPlan": 0,
+      "provisions": [
+        {
+          "name": "какшечки",
+          "count": 5,
+          "minCount": 10
+        },
+        {
+          "name": "тест",
+          "count": 20,
+          "minCount": 10
+        },
+        {
+          "name": "тест 2",
+          "count": 20,
+          "minCount": 15
+        }
+      ]
     }
   ]
 }

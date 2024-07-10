@@ -21,14 +21,22 @@ import EmployeePage from '../../pages/EmployeePage/EmployeePage';
 import AddDessertPopup from '../../pages/addDessertPopup/AddDessertPopup';
 import PatchDessertPopup from '../../pages/PatchDessertPage/PatchDessertPage';
 import CoffeShopsPage from '../../pages/CoffeShopsPage/CoffeShopsPage';
-import { getCoffeShops } from '../../services/slices/CoffeShopsSlice';
+import { getCoffeShops, removeCoffeShop } from '../../services/slices/CoffeShopsSlice';
 import AddCoffeShopPopup from '../../pages/AddCoffeShopPopup/AddCoffeShopPopup';
+import CoffeShopPage from '../../pages/CoffeShopPage/CoffeShopPage';
+import ConfirmPage from '../ConfirmPopup/ConfirmPopup';
 
 
 function App() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const location = useLocation();
+  const idRemovedCoffeShop = useAppSelector(state => state.CoffeShopsSlice.currentCoffeShop?.id) || "1"
+
+  async function handleDelete () {
+    navigate('/coffe-shops')
+    dispatch(removeCoffeShop(idRemovedCoffeShop))
+}
 
   //u wanna create function of login/logout
   const userLogined = "login"
@@ -56,6 +64,7 @@ function App() {
             <Route path='/statistics' element={<StatisticsPage />} />
             <Route path='/settings' element={<SettingsPage />} />
             <Route path='/coffe-shops' element={<CoffeShopsPage />} />
+            <Route path='/coffe-shops/:id' element={<CoffeShopPage />} />
             <Route path='/desserts' element={<Desserts />} />
             <Route path='/change-employee/:id' element={<EmployeePage />}/>
           </Routes>
@@ -94,6 +103,12 @@ function App() {
             <Route path='/coffe-shops/add-coffe-shop' element={
               <Modal title='добавить коффейню' handleClose={closePopup}>
                 <AddCoffeShopPopup />
+              </Modal>
+            } />
+
+            <Route path='coffe-shops/:id/confirm' element={
+              <Modal title='удалить кофейню' handleClose={closePopup}>
+                <ConfirmPage buttonText='Удалить' handleDelete={handleDelete} handleCancellation={closePopup}/>
               </Modal>
             } />
           </Routes>

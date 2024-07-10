@@ -20,7 +20,7 @@ const CoffeShopsPage = () => {
             <div className={styles.coffeShops}>
                 {coffeShops && coffeShops.length > 0 && coffeShops.map((coffeShop) => {
                     return (
-                        <CoffeShopCell name={coffeShop.name} />
+                        <CoffeShopCell name={coffeShop.name} id={coffeShop.id}/>
                     )
                 })}
                 <button className={styles.addButton} onClick={addCoffeChop}>Добавить новую кофейню</button>
